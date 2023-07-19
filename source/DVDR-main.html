@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content=""with=device-width, initial-scale="1.0">
+    <meta charset="UTF-8">
+        <title>Home | #DVDRcentral</title>
+        <link rel="stylesheet" type="text/css" href="DVDR-main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/71f3e29882.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="bg">
+    <nav>
+        <a href="DVDR-main.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="DVDR-main.html">HOME</a></li>
+                <li><a href="DVDR-videos.html">VIDEOS</a></li>
+                <li><a href="DVDR-screenshots.html">SCREENSHOTS</a></li>
+                <li><a href="DVDR-blog.html">BLOGPOSTS</a></li>
+                <li><a href="DVDR-email.html">CONTACT US</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>We're retired.</h1>
+        <p>Seriously, we're over it</p>
+        <a href="https://www.youtube.com/c/DVDRCentral" target=”_blank” class="play-btn">Look, all our channels are dead.</a>
+    </div>
+
+    <div class="bottomcontact">
+        <shadeblock>
+            <verticalpart>
+                <h1>Contact Us</h1>
+                <horizontalpart>
+                    <part1>
+                        <a href="https://www.youtube.com/channel/UCh5Lyyb0joDw6Uw3KbQuk1w" target=”_blank”><img src="images/logo.png"></a>
+                        <a href="https://www.youtube.com/c/DVDRCentral" target=”_blank”><img src="images/logo-invert.png"></a>
+                    </part1>
+                    <part2>
+                        <a href="DVDR-email.html"><img src="images/logo-gmail.png"></a>
+                        <a href="https://www.facebook.com/gaming/DVDRcinematics" target=”_blank”><img src="images/logo-facebook.png"></a>
+                        <a href="https://twitter.com/DVDR_YT" target=”_blank”><img src="images/logo-twitter.png"></a>
+                        <a href="https://soundcloud.com/dvdr-central" target=”_blank”><img src="images/logo-soundcloud.png"></a>
+                        <a href="https://www.reddit.com/user/MidnightMauraders420" target=”_blank”><img src="images/logo-reddit.png"></a>
+                    </part2>
+                    <part3>
+                        <a href="https://www.youtube.com/channel/UCaRT4zl4lXDt5ZHSm3TGuyw" target=”_blank”><img src="images/logo-djakie.png"></a>
+                        <a href="https://www.youtube.com/channel/UCTMDPgFOs6iY00H47P3Z3_w" target=”_blank”><img src="images/logo-mwah.png"></a>
+                        <a href="https://www.youtube.com/c/VirtualPlayground0" target=”_blank”><img src="images/logo-sayu.png"></a>
+                        <a href="DVDR-main.html"><img src="images/logo-debjit.png"></a>
+                    </part3>
+                </horizontalpart>
+            </verticalpart>
+        </shadeblock>
+    </div>
+
+    <!----Javascript Togglemenu----->
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    
+</body>
+</html>
