@@ -12,6 +12,8 @@
     background-position: center;
 }
 
+/*Common Navigation Bar*/
+
 .navbar{
     margin: auto;
     display: flex;
@@ -94,6 +96,8 @@
     display: block;
     text-align: center;
 }
+
+/* MAIN CONTENT - SOUMIL BISWAS*/
 
 .mainbuttons{
     display: flex;
@@ -189,6 +193,7 @@
     background-position: center;
 }
 
+/* BOTTOM SECTION - COMMON */
 
 .bottomcontact{
     background: rgb(236, 236, 236);
@@ -245,5 +250,38 @@
 .profilelink3:hover{
     background: url("images/logo-invert.png");
     background-color: #fff;
+    background-size: cover;
+}
+
+.profilelink4{
+    background: url("images/logo-facebook.png");
+    background-size: cover;
+}
+
+
+.profilelink4:hover{
+    background: url("images/logo-facebook-inverted.png");
+    background-size: cover;
+}
+
+.profilelink5{
+    background: url("images/logo-linkedin.png");
+    background-size: cover;
+}
+
+
+.profilelink5:hover{
+    background: url("images/logo-linkedin-selected.png");
+    background-size: cover;
+}
+
+.profilelink6{
+    background: url("images/logo-github.png");
+    background-size: cover;
+}
+
+
+.profilelink6:hover{
+    background: url("images/logo-github-selected.png");
     background-size: cover;
 }
