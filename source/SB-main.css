@@ -4,8 +4,7 @@
 
 
 #bg {
-    background-image: linear-gradient(rgba(51, 15, 87, 0.253),rgba(51, 15, 87, 0.253)), 
-    url(images//home-main.jpg);
+    background-image: linear-gradient(rgba(53, 147, 235, 0.75),rgb(160, 216, 241, 0.75)); 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -17,6 +16,8 @@ section{
 
 nav {
   display: flex;
+  background: rgb(83, 139, 223);
+  margin: -8px;
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
@@ -59,20 +60,10 @@ nav img{
   width: 100%;
 }
 
-.text-box{
-  width: 90%;
-  color: #fff;
-  opacity: 0.75;
-  margin-left: 40px;
-  text-align: left;
-}
-
-.text-box h1{
-  font-size: 50px;
-}
-
-.text-box p{
-  margin: 10px 0 40px;
+.main-box img{
+  width: 800px;
+  margin: 25px 25% 0;
+  border-radius: 10px;
 }
 
 .play-btn{

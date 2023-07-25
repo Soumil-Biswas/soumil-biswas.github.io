@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Bebas Neue
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#fff, #fff); 
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    background: rgb(236, 236, 236)
+}
+
+.profile{
+    display: flex;
+}
+
+.profiletext{
+    padding: 0 2px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.profiletext::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background:hsla(29, 45%, 21%, 0.7);
+    display: block;
+    margin: auto;
+    transition: 0.35s;    
+}
+
+.profile:hover .profiletext::after{
+    width: 100%;
+}
+
+.logo{
+    width: 20px;
+    height: 20px;
+    background: url(images/logo-sb.png);
+    background-size: cover;
+    display: inline-block;
+    transition: 0.35s;
+}
+
+
+.profile:hover .logo{
+    background: url(images/logo-sb-inverted.png);
+    background-size: cover;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding-left: 25px;
+}
+
+.navbar ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.navbar ul li::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background:hsla(29, 45%, 21%, 0.7);
+    display: block;
+    margin: auto;
+    transition: 0.35s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.title{
+    padding: 50px;
+    display: block;
+    text-align: center;
+}
+
+.mainbuttons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainbuttons a{
+    margin: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.main1 .mainbtn{
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.35s;
+    height: 450px;
+    background-size: 0%;
+}
+
+.main1 .mainbtnimg{
+    width: 400px;
+    height: 225px;
+    background: url("screenshots/rvl 4k dvdr (1).jpg");
+    background-size: cover;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.35s;
+}
+
+.main1:hover .mainbtn{
+    background: rgb(236, 236, 236);
+}
+
+.main1:hover .mainbtnimg{
+    background: url("screenshots/rvl 4k dvdr (2).jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.main2 .mainbtn{
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.35s;
+    height: 450px;
+}
+
+.main2 .mainbtnimg{
+    width: 400px;
+    height: 225px;
+    background: url("screenshots/confScreenshot (1125)dvdr-scale-2_00x.png");
+    background-size: cover;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.35s;
+}
+
+.main2:hover .mainbtn{
+    background: rgb(236, 236, 236);
+}
+
+.main2:hover .mainbtnimg{
+    background: url("screenshots/confScreenshot (1127)dvdr-scale-2_00x.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.main3 .mainbtn{
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.35s;
+    height: 450px;
+}
+
+.main3 .mainbtnimg{
+    width: 400px;
+    height: 225px;
+    background: url("screenshots/Screenshot (1122)dvdr-conf.png");
+    background-size: cover;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.35s;
+}
+
+.main3:hover .mainbtn{
+    background: rgb(236, 236, 236);
+}
+
+.main3:hover .mainbtnimg{
+    background: url("screenshots/Screenshot (1123)dvdr-conf.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.bottomcontact{
+    background: rgb(236, 236, 236);
+    padding: 10px 30px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-around;
+}
+
+.bottomcontact p img{
+    width: 10px;
+    padding-right: 5px;
+}
+
+.profilelinks div{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: 0.35s;  
+    margin: 10px;
+
+}
+
+.profilelink1{
+    background: url("images/logo-sb.png");
+    background-size: cover;
+}
+
+
+.profilelink1:hover{
+    background: url("images/logo-sb-inverted.png");
+    background-size: cover;
+}
+
+.profilelink2{
+    background: url("images/logo-mwah.png");
+    background-size: cover;
+}
+
+
+.profilelink2:hover{
+    background: url("images/logo-mwah-selected.png");
+    background-size: cover;
+}
+
+.profilelink3{
+    background: url("images/logo.png");
+    background-color: #000000;
+    background-size: cover;
+}
+
+
+.profilelink3:hover{
+    background: url("images/logo-invert.png");
+    background-color: #fff;
+    background-size: cover;
+}
