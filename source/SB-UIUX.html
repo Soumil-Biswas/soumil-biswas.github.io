@@ -36,8 +36,56 @@
                 </div>
                 
                 <div class="mainuimenu">
-                    <button><img src="thumbnails/Forza Horizon but it's an Anime Opening.webp" alt=""></button>
-                    <button><img src="thumbnails/ASPHALT - (Max Brhon - Cyberpunk).jpg" alt=""></button>
+                    <button id="menubtn1" onclick="showSlideshow(1)">
+                        <img src="thumbnails/Forza Horizon but it's an Anime Opening.webp" alt="">
+                    </button>
+                    <button id="menubtn2" onclick="showSlideshow(2)">
+                        <img src="thumbnails/ASPHALT - (Max Brhon - Cyberpunk).jpg" alt="">
+                    </button>
+                </div>
+
+                <div class="slideshow 1">
+
+                    <!-- Previous button -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>                    
+
+                    <div id="slide1" class="slide one fade">
+                        <img src="screenshots/confScreenshot (1125)dvdr-scale-2_00x.png" alt="">
+                    </div>
+                    <div id="slide1" class="slide one fade">
+                        <img src="screenshots/confScreenshot (1127)dvdr-scale-2_00x.png" alt="">
+                    </div>
+
+                    <!-- Next button -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- The dots/circles -->
+                    <div class="dotbox" style="text-align:center">
+                        <span id="dot1" class="dot one" onclick="currentSlide(1)"></span>
+                        <span id="dot1" class="dot one" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+
+                <div class="slideshow 2">
+
+                    <!-- Previous button -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>                    
+
+                    <div id="slide2" class="slide two fade">
+                        <img src="screenshots/Screenshot (1122)dvdr-conf.png" alt="">
+                    </div>
+                    <div id="slide2" class="slide two fade">
+                        <img src="screenshots/Screenshot (1123)dvdr-conf.png" alt="">
+                    </div>
+
+                    <!-- Next button -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- The dots/circles -->
+                    <div class="dotbox" style="text-align:center">
+                        <span id="dot2" class="dot two" onclick="currentSlide(1)"></span>
+                        <span id="dot2" class="dot two" onclick="currentSlide(2)"></span>
+                    </div>
                 </div>
                
             </div>
@@ -70,3 +118,75 @@
 
     </body>
 </html>
+
+
+<!--Javascript--> 
+
+<script>
+    let slidePanel = 0;
+    let slideIndex = 1;
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n, slidePanel);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n, slidePanel);
+    }
+
+    function showSlideshow(n) {
+        let shows = document.getElementsByClassName("slideshow");
+        if (n == 1) {
+            shows[0].style.display = "flex";
+            shows[1].style.display = "none";
+            slidePanel = 1;
+            currentSlide(1);
+        }
+        if (n == 2) {
+            shows[0].style.display = "none";
+            shows[1].style.display = "flex";
+            slidePanel = 2;
+            currentSlide(1);
+        }
+    }
+
+    function showSlides(n, p) {
+        let i, slides, dots;
+        if (p == 1) {
+            slides = document.getElementsByClassName("slide one");
+            dots = document.getElementsByClassName("dot one");
+            console.log("one loaded.");
+        }
+        else if (p == 2) {
+            slides = document.getElementsByClassName("slide two");
+            dots = document.getElementsByClassName("dot two");
+            console.log("two loaded.");
+        }
+        /*
+        else {
+            slides = document.getElementsByClassName("slide one");
+            dots = document.getElementsByClassName("dot one");
+            console.log("two loaded. (default)");
+        }
+        */
+
+        
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+

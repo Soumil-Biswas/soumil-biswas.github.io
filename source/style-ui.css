@@ -111,7 +111,7 @@
 .mainuimenu{
     display: flex;
     align-items: start;
-    padding: 20px 80px;
+    padding: 20px 150px;
 }
 
 .mainuimenu button{
@@ -131,9 +131,79 @@
     border-color: hsl(113, 100%, 57%, 0.842);
 }
 
+.slideshow{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.slide img{
+    width: 1200px;
+    border-radius: 20px;
+}
+
+.prev, .next{
+    cursor: pointer;
+    margin-top: 17%;
+    width: auto;
+    padding: 16px;
+    color: hsl(113, 100%, 57%, 0.842);
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;;
+}
+
+.prev:hover, .next:hover {
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.dotbox{
+    position: absolute;
+    bottom: 2%;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
 
 .spacer{
-    height: max-content;
+    margin: 100px;
 }
 
 /* BOTTOM SECTION - COMMON */
@@ -209,25 +279,26 @@
 }
 
 .profilelink5{
-    background: url("images/logo-linkedin.png");
+    background: url("images/logo-linkedin-selected.png");
     background-size: cover;
 }
 
 
 .profilelink5:hover{
-    background: url("images/logo-linkedin-selected.png");
+    background: url("images/logo-linkedin.png");
     background-size: cover;
 }
 
 .profilelink6{
-    background: url("images/logo-github.png");
+    background: url("images/logo-github-selected.png");
     background-size: cover;
 }
 
 
 .profilelink6:hover{
-    background: url("images/logo-github-selected.png");
+    background: url("images/logo-github.png");
     background-size: cover;
+    background-color: #fff;
 }
 
 .profilelink7{
