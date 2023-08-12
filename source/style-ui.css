@@ -125,6 +125,7 @@
     border-radius: 10px;
     border-color: hsl(113, 100%, 57%, 0);
     border-style: solid;
+    transition: 0.5s;
 }
 
 .mainuimenu button img:hover{
@@ -279,24 +280,24 @@ to {opacity: 1}
 }
 
 .profilelink5{
-    background: url("images/logo-linkedin-selected.png");
+    background: url("images/logo-linkedin.png");
     background-size: cover;
 }
 
 
 .profilelink5:hover{
-    background: url("images/logo-linkedin.png");
+    background: url("images/logo-linkedin-inverted.png");
     background-size: cover;
 }
 
 .profilelink6{
-    background: url("images/logo-github-selected.png");
+    background: url("images/logo-github.png");
     background-size: cover;
 }
 
 
 .profilelink6:hover{
-    background: url("images/logo-github.png");
+    background: url("images/logo-github-inverted.png");
     background-size: cover;
     background-color: #fff;
 }
@@ -308,6 +309,6 @@ to {opacity: 1}
 
 
 .profilelink7:hover{
-    background: url("images/logo-youtube-selected.png");
+    background: url("images/logo-youtube-inverted.png");
     background-size: cover;
 }

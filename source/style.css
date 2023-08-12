@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Bebas Neue
+    font-family: Bebas Neue;
+    text-decoration: none;
 }
 
 .background{
@@ -109,6 +110,7 @@
     margin: 35px;
     color: #000000;
     text-decoration: none;
+    background-color: whitesmoke;
 }
 
 .main1 .mainbtn{
@@ -271,7 +273,7 @@
 
 
 .profilelink5:hover{
-    background: url("images/logo-linkedin-selected.png");
+    background: url("images/logo-linkedin-inverted.png");
     background-size: cover;
 }
 
@@ -282,7 +284,7 @@
 
 
 .profilelink6:hover{
-    background: url("images/logo-github-selected.png");
+    background: url("images/logo-github-inverted.png");
     background-size: cover;
 }
 
@@ -293,6 +295,256 @@
 
 
 .profilelink7:hover{
-    background: url("images/logo-youtube-selected.png");
+    background: url("images/logo-youtube-inverted.png");
     background-size: cover;
 }
+
+/* CONTACTS PAGE */
+
+.main{
+    margin: 50px;
+    margin-top: 100px;
+}
+
+.contacts div{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    transition: 0.35s;  
+    margin: 10px;
+    z-index: 1;
+}
+
+.contacts a{
+    display: flex;
+    font-size: 70px;
+    text-decoration: none;
+    text-align: left;
+    color: #000000;
+    justify-content: start;
+    margin: 20px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.contacts span{
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: 0.7s;
+}
+
+.contacts a:hover span{
+    width: 100%;
+}
+
+.contacts p{
+    margin-left: 50px;
+    margin-top: 7px;
+    z-index: 1;
+}
+
+.contacts a:hover p{
+    color: #fff;
+}
+
+.btn1{
+    background:hsla(29, 45%, 21%, 0.7);
+}
+
+.profilelink8{
+    background: url("images/logo-phone.png");
+    background-size: cover;
+}
+
+
+.contacts a:hover .profilelink8{
+    background:url("images/logo-phone-white.png");
+    background-size: cover;
+}
+
+.profilelink9{
+    background: url("images/logo-whatsapp-inverted.png");
+    background-size: cover;
+}
+
+.btn2{
+    background: hsla(116, 88%, 32%, 0.7);
+}
+
+.contacts a:hover .profilelink9{
+    background:url("images/logo-whatsapp.png");
+    background-size: cover;
+}
+
+.profilelink10{
+    background: url("images/logo-gmail-new.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn3{
+    background: hsla(5, 81%, 56%, 0.7);
+}
+
+.contacts a:hover .profilelink10{
+    background:url("images/logo-gmail.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn4{
+    background:linear-gradient(hsla(226, 41%, 50%, 0.7), hsla(227, 50%, 56%, 0.7));
+}
+
+.contacts a:hover .profilelink4{
+    background: url("images/logo-facebook-inverted.png");
+    background-size: cover;
+}
+
+.btn5{
+    background: hsla(210, 100%, 61%, 0.7);
+}
+
+.contacts a:hover .profilelink5{
+    background: url("images/logo-linkedin-inverted.png");
+    background-size: cover;
+}
+
+.btn6{
+    background:linear-gradient(hsla(276, 89%, 58%, 0.7), hsla(250, 97%, 70%, 0.7));
+}
+
+.contacts a:hover .profilelink6{
+    background: url("images/logo-github-inverted.png");
+    background-size: cover;
+}
+
+.btn7{
+    background:hsla(0, 100%, 50%, 0.7)
+}
+
+.contacts a:hover .profilelink7{
+    background: url("images/logo-youtube-inverted.png");
+    background-size: cover;
+}
+
+.contacts a .btn8{
+    background-image: url("images/home-main.jpg");
+    height: 760px;
+    background-size: cover;
+    background-position-y: 300px;
+}
+
+.contacts a:hover .btn8{
+    height: 760px;
+    width: 100%;
+    background-size: cover;
+}
+
+.contacts a .profilelink3{
+    background: url("images/logo-invert.png");
+    background-size: cover;
+}
+
+.contacts a:hover .profilelink3{
+    background: url("images/logo.png");
+    background-size: cover;
+}
+
+.btn9{
+    background-color: rgba(77, 199, 255, 0.7);
+}
+
+.contacts a .profilelink11{
+    background: url("images/logo-microsoft.png");
+    background-size: cover;
+}
+
+.contacts a:hover .profilelink11{
+    background: url("images/logo-microsoft-inverted.png");
+    background-size: cover;
+}
+
+/* RESUME PAGE */
+
+.resumepanel{
+    margin: 100px 300px;
+}
+
+.resumepanel .part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumepanel .part .verticalpart{
+    display: block;
+    margin-top: 50px;
+}
+
+.verticalpart h3{
+    text-align: center;
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.resumepanel a{
+    color: hsla(29, 45%, 21%, 0.7);
+    font-size: 20px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.resumepanel span{
+    background-color:hsla(29, 45%, 21%, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 15px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.7s;
+}
+
+.resumepanel a:hover {
+    background: transparent;
+    color: rgba(255, 255, 255);
+}
+
+.resumepanel a:hover span{
+    width: 100%;
+}
+
+.resumepanel div img{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    border-color: rgba(118, 255, 255, 0.7);
+    border-style: dotted;
+}
+
+
+
+
+
+
