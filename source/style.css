@@ -124,7 +124,7 @@
 .main1 .mainbtnimg{
     width: 400px;
     height: 225px;
-    background: url("screenshots/rvl 4k dvdr (1).jpg");
+    background: url("images/botan2.jpg");
     background-size: cover;
     border-radius: 10px;
     display: inline-block;
@@ -136,7 +136,7 @@
 }
 
 .main1:hover .mainbtnimg{
-    background: url("screenshots/rvl 4k dvdr (2).jpg");
+    background: url("images/portfolio-2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -151,7 +151,7 @@
 .main2 .mainbtnimg{
     width: 400px;
     height: 225px;
-    background: url("screenshots/confScreenshot (1125)dvdr-scale-2_00x.png");
+    background: url("screenshots/rvl 4k dvdr (1).jpg");
     background-size: cover;
     border-radius: 10px;
     display: inline-block;
@@ -163,7 +163,7 @@
 }
 
 .main2:hover .mainbtnimg{
-    background: url("screenshots/confScreenshot (1127)dvdr-scale-2_00x.png");
+    background: url("screenshots/rvl 4k dvdr (2).jpg");
     background-size: cover;
     background-position: center;
 }
@@ -178,7 +178,7 @@
 .main3 .mainbtnimg{
     width: 400px;
     height: 225px;
-    background: url("screenshots/Screenshot (1122)dvdr-conf.png");
+    background: url("screenshots/Screenshot-Code-1.png");
     background-size: cover;
     border-radius: 10px;
     display: inline-block;
@@ -190,7 +190,7 @@
 }
 
 .main3:hover .mainbtnimg{
-    background: url("screenshots/Screenshot (1123)dvdr-conf.png");
+    background: url("screenshots/Screenshot-Code-2.png");
     background-size: cover;
     background-position: center;
 }
