@@ -676,6 +676,12 @@ to {opacity: 1}
     height: 250px;
 }
 
+/* -- Bottom Contact -- */
+
+.bottomcontact{
+    flex-direction: column;
+}
+
 /* -- Projects Panel -- */
 
 .designmenu{
