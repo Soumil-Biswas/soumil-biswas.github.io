@@ -279,6 +279,125 @@
     background-size: cover;
 }
 
+/* -- PROJECTS PAGE -- */
+
+.designmenu{
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.designmenu button{
+    font-size: 20px;
+    margin-right: 50px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 30px;
+    border-color: hsla(29, 45%, 21%);
+    border-style: solid;
+}
+
+.mainmenu{
+    display: none;
+    align-items: start;
+    padding: 20px 100px;
+}
+
+.mainmenu button{
+    margin-bottom: 10px;
+    margin-right: 40px;
+    background-color: #00000000;
+    border: none;
+}
+
+.mainmenu button img{
+    width: 400px;
+    border-radius: 10px;
+    border-color: hsla(29, 45%, 21%, 0);
+    border-style: solid;
+    transition: 0.5s;
+}
+
+.mainmenu button img:hover{
+    border-color: hsla(29, 45%, 21%, 0.7);
+}
+
+.slideshow{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.slide img{
+    width: 1200px;
+    border-radius: 20px;
+}
+
+.prev, .next{
+    cursor: pointer;
+    margin-top: 17%;
+    width: auto;
+    padding: 16px;
+    color: hsla(29, 45%, 21%, 0.7);
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;;
+}
+
+.prev:hover, .next:hover {
+    color: rgb(0, 0, 0);
+}
+
+.dotbox{
+    position: absolute;
+    bottom: 2%;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+
+.spacer{
+    margin: 100px;
+    height: 1000px;
+}
+
 /* CONTACTS PAGE */
 
 .contacts{
@@ -534,6 +653,15 @@
     padding: 30px 5px;
 }
 
+
+.navbar ul li a{
+    font-size: 15px;
+}
+
+.navbar ul li{
+    margin-left: 10px;
+}
+
 .mainbuttons{
     flex-wrap: wrap;
     flex-direction: column;
@@ -546,6 +674,39 @@
 
 .mainbtn{
     height: 250px;
+}
+
+/* -- Projects Panel -- */
+
+.designmenu{
+    margin-left: 5px;
+}
+
+.designmenu button{
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.mainmenu{
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainmenu button{
+    margin-right: 0;
+}
+
+.mainmenu button img{
+    width: 300px;
+}
+
+.slide img{
+    width: 250px;
+}
+
+.prev, .next{
+    font-size: 60px;
+    margin-top: 0;
 }
 
 /* -- Resume Panel -- */
@@ -591,7 +752,7 @@
 }
 
 .contacts .longtext{
-    margin-left: 15px;
+    margin-left: 10px;
     font-size: 20px;
 }
 

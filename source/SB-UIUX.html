@@ -3,10 +3,10 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width initial-scale=1.0">>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title>Soumil Biswas - Projects | UI</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style-ui.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -30,16 +30,54 @@
             <div class="navborder"></div>
 
             <div class="main">
+
                 <div class="title">
-                    <h1>Projects: UI/UX Design</h1>
-                    <h3>All UI/ UX Undertakings in one place.</h3>
+                    <h1>Projects</h1>
+                    <h3>All Design Undertakings in one place.</h3>
+                </div>
+
+                <div class="designmenu">
+                    <button id="" onclick="showMenu(1)">UI/UX Designs</button>
+                    <button id="" onclick="showMenu(2)">Graphic Design</button>
+                    <button id="" onclick="showMenu(3)">3D Modelling</button>
+                    <!-- <button id="" onclick="showMenu(4)">Art/ Sketches</button> -->
                 </div>
                 
-                <div class="mainuimenu">
+                <div class="mainmenu ui">
                     <button id="menubtn1" onclick="showSlideshow(1)">
                         <img src="screenshots/UltimateMainMenu/UltimateMenu Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 5) 27-08-2023 14_26_59.png" alt="">
                     </button>
                     <button id="menubtn2" onclick="showSlideshow(2)">
+                        <img src="screenshots/ProMainMenuV3/AssassinTheFirstList Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 6) 23-08-2023 08_24_24.png" alt="">
+                    </button>
+                </div>
+
+                <div class="mainmenu gd">
+                    <button id="menubtn1" onclick="showSlideshow(3)">
+                        <img src="screenshots/Graphic Design/Nishizaki Logo copy.png" alt="">
+                    </button>
+                    <button id="menubtn2" onclick="showSlideshow(4)">
+                        <img src="screenshots/Graphic Design/Covellone Logo copy.png" alt="">
+                    </button>
+                    <button id="menubtn2" onclick="showSlideshow(4)">
+                        <img src="screenshots/Graphic Design/DPSC Logo copy.png" alt="">
+                    </button>
+                </div>
+
+                <div class="mainmenu 3d">
+                    <button id="menubtn1" onclick="showSlideshow(5)">
+                        <img src="screenshots/3D Models/Proximity Mine (2).png" alt="">
+                    </button>
+                    <button id="menubtn2" onclick="showSlideshow(6)">
+                        <img src="screenshots/3D Models/Race tyre (1).png" alt="">
+                    </button>
+                </div>
+
+                <div class="mainmenu art">
+                    <button id="menubtn1" onclick="showSlideshow(3)">
+                        <img src="screenshots/UltimateMainMenu/UltimateMenu Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 5) 27-08-2023 14_26_59.png" alt="">
+                    </button>
+                    <button id="menubtn2" onclick="showSlideshow(4)">
                         <img src="screenshots/ProMainMenuV3/AssassinTheFirstList Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 6) 23-08-2023 08_24_24.png" alt="">
                     </button>
                 </div>
@@ -147,7 +185,7 @@
                
             </div>
 
-            <div class="spacer"></div>
+            <div class="spacer" id="spacer"></div>
             <div class="bottomcontact">
                 <p>
                     Studied in Welland Gouldsmith School, Patuli, Kolkata 
@@ -193,6 +231,38 @@
     showSlides(slideIndex = n, slidePanel);
     }
 
+    function showMenu(n) {
+        let shows = document.getElementsByClassName("slideshow");
+        shows[0].style.display = "none";
+        shows[1].style.display = "none";
+        document.getElementById("spacer").style.height = 0;
+        let menus = document.getElementsByClassName("mainmenu");
+        if (n ==1) {
+            menus[0].style.display = "flex";
+            menus[1].style.display = "none";
+            menus[2].style.display = "none";
+            menus[3].style.display = "none";
+        }
+        if (n ==2) {
+            menus[0].style.display = "none";
+            menus[1].style.display = "flex";
+            menus[2].style.display = "none";
+            menus[3].style.display = "none";
+        }
+        if (n ==3) {
+            menus[0].style.display = "none";
+            menus[1].style.display = "none";
+            menus[2].style.display = "flex";
+            menus[3].style.display = "none";
+        }
+        if (n == 4) {
+            menus[0].style.display = "none";
+            menus[1].style.display = "none";
+            menus[2].style.display = "none";
+            menus[3].style.display = "flex";
+        }
+    }
+
     function showSlideshow(n) {
         let shows = document.getElementsByClassName("slideshow");
         if (n == 1) {
@@ -221,13 +291,6 @@
             dots = document.getElementsByClassName("dot two");
             console.log("two loaded.");
         }
-        /*
-        else {
-            slides = document.getElementsByClassName("slide one");
-            dots = document.getElementsByClassName("dot one");
-            console.log("two loaded. (default)");
-        }
-        */
 
         
         if (n > slides.length) {
