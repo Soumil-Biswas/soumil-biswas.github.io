@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <title>Soumil Biswas - Projects | UI</title>
+        <title>Soumil Biswas - Projects</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +37,10 @@
                 </div>
 
                 <div class="designmenu">
-                    <button id="" onclick="showMenu(1)">UI/UX Designs</button>
+                    <button id="" onclick="showMenu(1), showSlideshow(1), showSlides(1, 1)">UI/UX Designs</button>
                     <button id="" onclick="showMenu(2)">Graphic Design</button>
                     <button id="" onclick="showMenu(3)">3D Modelling</button>
-                    <!-- <button id="" onclick="showMenu(4)">Art/ Sketches</button> -->
+                    <button id="" onclick="showMenu(4)">Art/ Sketches</button>
                 </div>
                 
                 <div class="mainmenu ui">
@@ -49,6 +49,10 @@
                     </button>
                     <button id="menubtn2" onclick="showSlideshow(2)">
                         <img src="screenshots/ProMainMenuV3/AssassinTheFirstList Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 6) 23-08-2023 08_24_24.png" alt="">
+                    </button>
+                    <button class="behance">
+                        Check out all of my work<br>on Behance!<br><br>
+                        <a target="_blank" href="https://www.behance.net/rugino3">Check out now</a> 
                     </button>
                 </div>
 
@@ -60,7 +64,11 @@
                         <img src="screenshots/Graphic Design/Covellone Logo copy.png" alt="">
                     </button>
                     <button id="menubtn2" onclick="showSlideshow(4)">
-                        <img src="screenshots/Graphic Design/DPSC Logo copy.png" alt="">
+                        <img src="screenshots/Graphic Design/Archana Logo copy.png" alt="">
+                    </button>
+                    <button class="behance">
+                        Check out all of my work<br>on Behance!<br><br>
+                        <a target="_blank" href="https://www.behance.net/gallery/178816363/Graphic-Design">Check out now</a> 
                     </button>
                 </div>
 
@@ -71,18 +79,20 @@
                     <button id="menubtn2" onclick="showSlideshow(6)">
                         <img src="screenshots/3D Models/Race tyre (1).png" alt="">
                     </button>
+                    <button class="behance" id="behancetd">
+                        Check out all of my work<br>on Behance!<br><br><br>
+                        <a target="_blank" href="https://www.behance.net/gallery/178816571/3D-Modelling">Check out now</a> 
+                    </button>
                 </div>
 
                 <div class="mainmenu art">
-                    <button id="menubtn1" onclick="showSlideshow(3)">
-                        <img src="screenshots/UltimateMainMenu/UltimateMenu Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 5) 27-08-2023 14_26_59.png" alt="">
-                    </button>
-                    <button id="menubtn2" onclick="showSlideshow(4)">
-                        <img src="screenshots/ProMainMenuV3/AssassinTheFirstList Preview [NetMode_ Standalone 0]  (64-bit_D3D Shader Model 6) 23-08-2023 08_24_24.png" alt="">
+                    <button class="behance" id="behanceart">
+                        Check out all of my work<br>on Behance!<br><br><br>
+                        <a target="_blank" href="https://www.behance.net/gallery/178817895/Art_dump">Check out now</a> 
                     </button>
                 </div>
 
-                <div class="slideshow 1">
+                <div class="slideshow" id="ss1">
 
                     <!-- Previous button -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>                    
@@ -136,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="slideshow 2">
+                <div class="slideshow" id="ss2">
 
                     <!-- Previous button -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>                    
@@ -202,11 +212,11 @@
                 <div class="profilelinks">
                     <a href="../index.html"><div class="profilelink1"></div></a>
                     <a href="SB-UIUX.html"><div class="profilelink2"></div></a>
-                    <a href="https://www.youtube.com/@soumilbiswas1841"><div class="profilelink7"></div></a>
-                    <a href="DVDR-main.html"><div class="profilelink3"></div></a>
-                    <a href="https://www.facebook.com/soumil.biswas.1"><div class="profilelink4"></div></a>
-                    <a href="https://www.linkedin.com/in/soumil-biswas-254206246/"><div class="profilelink5"></div></a>
-                    <a href="https://github.com/Soumil-Biswas"><div class="profilelink6"></div></a>
+                    <a target="_blank" href="https://www.youtube.com/@soumilbiswas1841"><div class="profilelink7"></div></a>
+                    <a target="_blank" href="DVDR-main.html"><div class="profilelink3"></div></a>
+                    <a target="_blank" href="https://www.facebook.com/soumil.biswas.1"><div class="profilelink4"></div></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/soumil-biswas-254206246/"><div class="profilelink5"></div></a>
+                    <a target="_blank" href="https://github.com/Soumil-Biswas"><div class="profilelink6"></div></a>
                 </div>
             </div>
         </div>
@@ -220,6 +230,8 @@
 <script>
     let slidePanel = 0;
     let slideIndex = 1;
+    showSlideshow(1);
+    showSlides(1, 1);
 
     // Next/previous controls
     function plusSlides(n) {
