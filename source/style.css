@@ -131,7 +131,7 @@
 }
 
 .main1 .mainbtnimg{
-    background: url("images/botan2.jpg");
+    background: url("images/portfolio.jpg");
     background-size: cover;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .main1:hover .mainbtnimg{
-    background: url("images/portfolio-2.jpg");
+    background: url("images/botan2.jpg");
     background-size: cover;
     background-position: center;
 }
