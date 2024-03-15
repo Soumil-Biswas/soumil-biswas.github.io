@@ -1,21 +1,22 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Bebas Neue;
+    font-family: Bebas Neue, Times, serif;
     text-decoration: none;
 }
 
 .background {
     width: 100%;
-    background-image: linear-gradient(#fff, #fff);
+    background: white;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Common Navigation Bar*/
 
 .navbar {
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -101,16 +102,21 @@
 
 .main {
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mainbuttons {
     display: flex;
-    justify-content: center;
+    width: 90%;
+    justify-content: space-evenly;
     text-align: center;
+    margin: 0 10px 70px 10px;
 }
 
 .mainbuttons a {
-    margin: 35px;
+    margin: 5px;
     color: #000000;
     text-decoration: none;
     background-color: whitesmoke;
@@ -191,6 +197,10 @@
 .bottomcontact p img {
     width: 10px;
     padding-right: 5px;
+}
+
+.profilelinks{
+    display: flex;
 }
 
 .profilelinks div {
@@ -733,6 +743,12 @@
 
     .bottomcontact {
         flex-direction: column;
+        height: 150px;
+    }
+
+    .profilelinks div{
+        width: 20px;
+        height: 20px;
     }
 
     /* -- Projects Panel -- */
