@@ -106,7 +106,7 @@ h1, h2, h3{
 /* MAIN CONTENT - SOUMIL BISWAS*/
 
 .main {
-    padding-bottom: 30px;
+    height: calc(100vh - calc(92px + 86px));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +115,7 @@ h1, h2, h3{
 .mainbuttons {
     display: flex;
     width: 90%;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
     margin: 0 10px 70px 10px;
 }
@@ -137,8 +137,8 @@ h1, h2, h3{
 }
 
 .mainbtnimg {
-    width: 400px;
-    height: 225px;
+    width: min(400px, 25vw);
+    height: min(225px, 20vh);
     border-radius: 10px;
     display: inline-block;
     transition: 0.4s;
