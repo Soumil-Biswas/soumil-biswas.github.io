@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cormorant:wght@300..700&family=Dancing+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Kaushan+Script&family=Niconne&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.p-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .p-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .p-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .p-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .p-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .p-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+.cta-btn {
+    @apply text-[#1C4476] border-2 border-[#1C4476] transition duration-500 hover:bg-[#1C4476] hover:text-white p-semibold rounded-full flex w-fit items-center py-2 px-5 gap-2;
+}
+
+.user-name {
+  @apply text-[#202A44] border border-[#202A44] p-semibold rounded-full py-2 px-4 transition duration-300 hover:bg-[#202A44] hover:text-white;
+}
+
+/* styles for flash messages */
+
+.ct-toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.ct-toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.progress.active:before {
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
