@@ -4,9 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bilbo: [" Bilbo Swash Caps", "serif"],
-        inter: ["Inter", "sans-serif"],
-        jura: ["Jura", "serif"],
+        bebas: ['Bebas Neue', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       animation: {
         spin: 'spin 0.5s linear infinite', // Set to 0.2s for a faster spin
@@ -21,6 +20,9 @@ export default {
       boxShadow: {
         "4xl": "0 0 15px rgba(156, 163, 175, 0.5)",
       },
+      backgroundImage: {
+        'DVDR': "url('/images/home-main.jpg')"
+      }
     },
   },
   plugins: [],

@@ -1,193 +1,45 @@
 import React from "react";
-import HeroPage from "../heroPage/HeroPage";
-import Feedbacks from "./components/Feedbacks";
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
-import Section3 from "./components/Section3";
-import OurServices from "./components/services/OurServices";
+import HomeTitleCard from "./components/homeTitleCard";
+import Hero from "../../Components/Hero";
 
 const Home = () => {
-  const data1 = {
-    mainTitle: "Why Choose Us?",
 
-    details: [
-      {
-        title: "Real-Time Updates",
-        des: "Get the latest and most accurate visa slot information.",
-        redirect:"services#section4",
-      },
-      {
-        title: "Personalized Training",
-        des: "Mock interview training session designed for your visa type.",
-        redirect:"services#section3",
-      },
-      {
-        title: "Easy and Secure Slot Availablity",
-        des: "Secure your next trip at the press of a button!",
-        redirect:"quote",
-      },
-    ],
-  };
-
-  const data2 = {
-    title: "Clients' feedback",
-    des: "What They’re Talking About.",
-    details: [
-      {
-        img: "/landing-page-home/Rectangle 20.webp",
-        name: "Name",
-        des: "There are many variations of passages of Lorem Ipsum available",
-      },
-      {
-        img: "/landing-page-home/Rectangle 22.webp",
-        name: "Name",
-        des: "There are many variations of passages of Lorem Ipsum available",
-      },
-      {
-        img: "/landing-page-home/Rectangle 21.webp",
-        name: "Name",
-        des: "There are many variations of passages of Lorem Ipsum available",
-      },
-    ],
-  };
-
-  const data6 = {
-    mainTitle: "Get to know us",
-    title: " US Visa Slot Booking and Mock Interview Services by Experts.",
-    description:
-      "The US visa process is a really intimidating and harrowing experience. However, it doesn't have to be like that. At Visa Sprint, we transform the entire process into easy journeys just for you. You can find seamless US visa slot booking and expert mock interview sessions according to your convenience.Whether you are a tourist, student, or employee going for an application, we are always here to make you prepared from the very first step to completion. Our services ensure you leave with confidence and knowledge in hand, thus upping the chances of success.",
-    details: [
-      "We will never compromise the safety of our people.",
-      "With over four decades of experience providing solutions to large-scale.",
-      "With over four decades of experience providing solutions to large-scale.",
-    ],
-    text: "Request to Quote",
-  };
-
-  const data7 = {
-    mainTitle: "Our Services",
-    content: [
-      {
-        title: "Current Visa Availability",
-        redirect:"/services#section1",
-        viewBox:"0 0 41 38",
-        paths:[
-           {
-            d:"M36 20.5455C36 17.4888 35.0936 14.5009 33.3955 11.9594C31.6973 9.41788 29.2836 7.43703 26.4597 6.26732C23.6357 5.0976 20.5283 4.79155 17.5304 5.38786C14.5326 5.98418 11.7788 7.45608 9.61746 9.61744C7.4561 11.7788 5.9842 14.5325 5.38788 17.5304C4.79156 20.5283 5.09762 23.6357 6.26733 26.4597C7.43705 29.2836 9.4179 31.6973 11.9594 33.3954C14.5009 35.0936 17.4889 36 20.5455 36C24.6443 36 28.5752 34.3718 31.4735 31.4735C34.3718 28.5752 36 24.6443 36 20.5455ZM9.53894 3.08278C8.72794 2.3888 7.697 2.00511 6.62962 2L6.36013 2.00773C3.89223 2.15648 1.99326 4.31818 2.00002 6.92614C2.00002 8.2021 2.45013 8.7971 3.05093 9.55631C3.08825 9.60509 3.13538 9.64551 3.18928 9.67496C3.24319 9.70441 3.30267 9.72223 3.36388 9.72727H3.44888C3.49674 9.72642 3.54376 9.71456 3.58631 9.69262C3.62885 9.67067 3.66578 9.63924 3.69422 9.60074L9.56405 3.83523C9.61417 3.78454 9.65333 3.72408 9.67908 3.65761C9.70484 3.59115 9.71665 3.52009 9.71377 3.44886C9.71133 3.37911 9.69456 3.3106 9.66448 3.24762C9.6344 3.18463 9.59166 3.12852 9.53894 3.08278ZM31.5385 3.08278C32.3495 2.3888 33.3804 2.00511 34.4478 2L34.7173 2.00773C37.1852 2.15648 39.0842 4.31818 39.0774 6.92614C39.0774 8.2021 38.6273 8.7971 38.0265 9.55631C37.9891 9.60491 37.9419 9.64515 37.888 9.67443C37.8341 9.70371 37.7747 9.72138 37.7135 9.72631H37.6285C37.5807 9.72545 37.5337 9.71359 37.4911 9.69165C37.4486 9.66971 37.4116 9.63827 37.3832 9.59977L31.5134 3.83523C31.4632 3.78454 31.4241 3.72408 31.3983 3.65761C31.3726 3.59115 31.3608 3.52009 31.3637 3.44886C31.3661 3.37911 31.3829 3.3106 31.4129 3.24762C31.443 3.18463 31.4858 3.12852 31.5385 3.08278Z",
-            stroke:"black",
-            strokeWidth:"3",
-            strokeMiterlimit:"10",
-
-           } ,
-           {
-            d:"M20.5454 9.72729V20.5455H12.8182M36 36L32.1363 32.1364M5.09088 36L8.95452 32.1364",
-            stroke:"black",
-              strokeWidth:"3",
-              strokeLinecap:"round" ,
-              strokeLinejoin:"round"
-           },
-        ],
-        description:
-          "Get ahead with the fresh opening of U.S. visa appointment dates. Our live notification helps you find out the immediate openings for your slots, making you avoid missing the opportunity for obtaining a visa appointment according to your preferences.",
-      },
-      {
-        title: "The Ultimate Mock Interview",
-        redirect:"/services#section3",
-        viewBox:"0 0 43 43",
-       paths:[
-        {
-          d:"M11.7498 9.8V7.85C11.7498 5.0927 11.7498 3.71405 12.6078 2.858C13.4619 2 14.8406 2 17.5999 2H25.4001C28.1575 2 29.5361 2 30.3922 2.858C31.2502 3.7121 31.2502 5.09075 31.2502 7.85V9.8C31.2502 12.5573 31.2502 13.936 30.3922 14.792C29.5381 15.65 28.1594 15.65 25.4001 15.65H23.45L17.5999 19.55V15.65C14.8425 15.65 13.4638 15.65 12.6078 14.792C11.7498 13.9379 11.7498 12.5593 11.7498 9.8ZM5.10009 34.643C3.87351 35.4659 0.659824 37.1429 2.61767 39.2411C3.5732 40.2668 4.63987 41 5.97761 41H13.6218C14.9595 41 16.0262 40.2668 16.9817 39.2411C18.9396 37.1429 15.7259 35.4659 14.4993 34.6449C13.1129 33.7035 11.4756 33.2002 9.7997 33.2002C8.12381 33.2002 6.48654 33.7016 5.10009 34.643ZM28.5007 34.643C27.2741 35.4659 24.0604 37.1429 26.0183 39.2411C26.9738 40.2668 28.0405 41 29.3782 41H37.0224C38.3601 41 39.4268 40.2668 40.3823 39.2411C42.3402 37.1429 39.1265 35.4659 37.8999 34.6449C36.5135 33.7035 34.8762 33.2002 33.2003 33.2002C31.5244 33.2002 29.8871 33.7016 28.5007 34.643ZM13.6998 24.425C13.6998 25.4593 13.2889 26.4513 12.5575 27.1827C11.8261 27.9141 10.8341 28.325 9.7997 28.325C8.76533 28.325 7.77333 27.9141 7.04192 27.1827C6.31051 26.4513 5.89961 25.4593 5.89961 24.425C5.89961 23.3907 6.31051 22.3987 7.04192 21.6673C7.77333 20.9359 8.76533 20.525 9.7997 20.525C10.8341 20.525 11.8261 20.9359 12.5575 21.6673C13.2889 22.3987 13.6998 23.3907 13.6998 24.425ZM37.1004 24.425C37.1004 25.4593 36.6895 26.4513 35.9581 27.1827C35.2267 27.9141 34.2347 28.325 33.2003 28.325C32.1659 28.325 31.1739 27.9141 30.4425 27.1827C29.7111 26.4513 29.3002 25.4593 29.3002 24.425C29.3002 23.3907 29.7111 22.3987 30.4425 21.6673C31.1739 20.9359 32.1659 20.525 33.2003 20.525C34.2347 20.525 35.2267 20.9359 35.9581 21.6673C36.6895 22.3987 37.1004 23.3907 37.1004 24.425Z",
-           stroke:"black",
-              strokeWidth:"3.5",
-              strokeLinecap:"round" ,
-              strokeLinejoin:"round"
-
-        }
-       ],
-        description:
-          "Be prepared thoroughly for an unlimited number of 1:1 mock interview sessions. Examined one-on-one with personalized coaching for your visa category further allows one to practice the most likely questions and refine those approaches so as to build confidence. The more one practices, the better probabilities of approval !",
-      },
-      {
-        title: "24/7 Support",
-        redirect:"/services#section2",
-        viewBox:"0 0 39 40",
-        paths:[
-          {
-            d:"M37 9.3935H29.5613C29.4846 9.3935 29.4087 9.378 29.3379 9.34789C29.2672 9.31777 29.2029 9.27364 29.1488 9.21802C29.0947 9.1624 29.0519 9.09639 29.0228 9.02379C28.9937 8.95118 28.9789 8.87341 28.9793 8.79493C28.9801 8.65051 29.0309 8.51106 29.1228 8.40143L34.4284 2.19401C34.4798 2.13246 34.5438 2.08319 34.6158 2.04968C34.6878 2.01616 34.7662 1.99922 34.8453 2.00003C35.1484 2.00003 35.3948 2.25498 35.3948 2.56535V11.8571M24.5074 11.8543H18.0919V10.4549C18.0926 9.97608 18.2294 9.50784 18.4856 9.10729C18.7418 8.70673 19.1063 8.39118 19.5347 8.19913L23.1079 6.60017C23.6024 6.37978 24.0075 5.99162 24.2549 5.50112C24.5024 5.01062 24.5771 4.44777 24.4664 3.90746C24.3558 3.36714 24.0666 2.8824 23.6475 2.53494C23.2284 2.18749 22.7052 1.99857 22.1659 2.00003H20.4984C20.0008 2.00059 19.5156 2.15887 19.1094 2.45311C18.7033 2.74736 18.396 3.16314 18.23 3.64333M20.8693 36.8087C22.2726 37.7337 23.9428 38.1391 25.6024 37.9577C27.262 37.7762 28.811 37.0186 29.9917 35.811L31.0203 34.758C31.4766 34.2859 31.7325 33.6486 31.7325 32.9845C31.7325 32.3203 31.4766 31.683 31.0203 31.2109L26.6892 26.8047C26.2326 26.3394 25.6146 26.0781 24.9703 26.0781C24.326 26.0781 23.708 26.3394 23.2514 26.8047C22.7902 27.2718 22.1677 27.5338 21.5189 27.5338C20.8702 27.5338 20.2477 27.2718 19.7865 26.8047L12.8838 19.7383C12.4275 19.2662 12.1716 18.6288 12.1716 17.9647C12.1716 17.3006 12.4275 16.6633 12.8838 16.1912C13.3383 15.7238 13.5936 15.0911 13.5936 14.4315C13.5936 13.7719 13.3383 13.1392 12.8838 12.6718L8.71506 8.23793C8.25388 7.77085 7.63134 7.50888 6.98261 7.50888C6.33388 7.50888 5.71134 7.77085 5.25016 8.23793L4.22152 9.29097C3.02073 10.4827 2.25549 12.0599 2.05351 13.7595C1.85153 15.459 2.22503 17.1781 3.11167 18.6298C7.83028 25.8051 13.8603 31.9781 20.8693 36.8087Z",
-              stroke:"black",
-              strokeWidth:"3",
-              strokeLinecap:"round" ,
-              strokeLinejoin:"round"
-
-          }
-        ],
-        description:
-          "Our support team is there to answer your questions and provide guidance throughout the process. From helping you with your application to advising you about your interview, we are here to help you out when needed.",
-      },
-      {
-        title: "Professional Guidance for US & German Visas",
-        redirect:"/services#section1",
-        viewBox:"0 0 37 33",
-        paths:[
-          {
-             d:"M18.5 33C17.9758 33 17.5368 32.824 17.1828 32.472C16.8288 32.12 16.6512 31.6849 16.65 31.1667C16.6488 30.6484 16.8264 30.2133 17.1828 29.8613C17.5392 29.5093 17.9783 29.3333 18.5 29.3333H31.45V16.3167C31.45 12.7417 30.1938 9.70933 27.6815 7.21967C25.1692 4.73 22.1087 3.48456 18.5 3.48333C14.8913 3.48211 11.8314 4.72756 9.3203 7.21967C6.80923 9.71178 5.55247 12.7441 5.55 16.3167V25.6667C5.55 26.1861 5.3724 26.6218 5.0172 26.9738C4.662 27.3258 4.22293 27.5012 3.7 27.5C2.6825 27.5 1.81177 27.1413 1.0878 26.4238C0.363833 25.7064 0.00123333 24.8429 0 23.8333V20.1667C0 19.525 0.162183 18.9218 0.48655 18.3572C0.810917 17.7925 1.2654 17.3415 1.85 17.0042L1.98875 14.575C2.23542 12.4972 2.84468 10.5722 3.81655 8.8C4.78842 7.02778 6.00633 5.48472 7.4703 4.17083C8.93427 2.85694 10.6141 1.83333 12.5097 1.1C14.4053 0.366666 16.4021 0 18.5 0C20.5979 0 22.5866 0.366666 24.4662 1.1C26.3458 1.83333 28.0263 2.84961 29.5075 4.14883C30.9887 5.44805 32.2066 6.98317 33.1612 8.75417C34.1158 10.5252 34.7325 12.4502 35.0112 14.5292L35.15 16.9125C35.7358 17.1875 36.1909 17.6 36.5153 18.15C36.8397 18.7 37.0012 19.2806 37 19.8917V24.1083C37 24.7194 36.8384 25.3 36.5153 25.85C36.1922 26.4 35.7371 26.8125 35.15 27.0875V29.3333C35.15 30.3417 34.788 31.2052 34.064 31.9238C33.3401 32.6425 32.4687 33.0012 31.45 33H18.5ZM12.95 20.1667C12.4258 20.1667 11.9868 19.9907 11.6328 19.6387C11.2788 19.2867 11.1012 18.8516 11.1 18.3333C11.0988 17.8151 11.2764 17.38 11.6328 17.028C11.9892 16.676 12.4283 16.5 12.95 16.5C13.4717 16.5 13.9114 16.676 14.269 17.028C14.6267 17.38 14.8037 17.8151 14.8 18.3333C14.7963 18.8516 14.6187 19.2873 14.2672 19.6405C13.9157 19.9937 13.4766 20.1691 12.95 20.1667ZM24.05 20.1667C23.5258 20.1667 23.0868 19.9907 22.7328 19.6387C22.3788 19.2867 22.2012 18.8516 22.2 18.3333C22.1988 17.8151 22.3764 17.38 22.7328 17.028C23.0892 16.676 23.5283 16.5 24.05 16.5C24.5717 16.5 25.0114 16.676 25.369 17.028C25.7267 17.38 25.9037 17.8151 25.9 18.3333C25.8963 18.8516 25.7187 19.2873 25.3672 19.6405C25.0157 19.9937 24.5766 20.1691 24.05 20.1667ZM7.44625 17.325C7.23042 14.0861 8.21708 11.3056 10.4062 8.98333C12.5954 6.66111 15.3242 5.5 18.5925 5.5C21.3367 5.5 23.7497 6.36289 25.8315 8.08867C27.9134 9.81444 29.1696 12.023 29.6 14.7143C26.7942 14.6826 24.2122 13.9333 21.854 12.4667C19.4959 11 17.6841 9.01389 16.4187 6.50833C15.9254 8.95278 14.8851 11.1302 13.2978 13.0405C11.7105 14.9508 9.75998 16.379 7.44625 17.325Z",
-          }
-         ],
-        description:
-          "Get step-by-step application guides for US and German Visas. From getting documentation ready to making submissions, we make this happen easily and effectively for them.",
-      },
-      {
-        title: "Customized Visa Prep Sessions",
-        redirect:"/services#section5",
-        viewBox:"0 0 39 39",
-        paths:[
-          {
-            d:"M11.625 23.875H5.5C4.57174 23.875 3.6815 24.2437 3.02513 24.9001C2.36875 25.5565 2 26.4467 2 27.375V33.5C2 34.4283 2.36875 35.3185 3.02513 35.9749C3.6815 36.6312 4.57174 37 5.5 37H11.625C12.5533 37 13.4435 36.6312 14.0999 35.9749C14.7563 35.3185 15.125 34.4283 15.125 33.5V27.375C15.125 26.4467 14.7563 25.5565 14.0999 24.9001C13.4435 24.2437 12.5533 23.875 11.625 23.875ZM33.5 2H27.375C26.4467 2 25.5565 2.36875 24.9001 3.02513C24.2437 3.6815 23.875 4.57174 23.875 5.5V11.625C23.875 12.5533 24.2437 13.4435 24.9001 14.0999C25.5565 14.7563 26.4467 15.125 27.375 15.125H33.5C34.4283 15.125 35.3185 14.7563 35.9749 14.0999C36.6312 13.4435 37 12.5533 37 11.625V5.5C37 4.57174 36.6312 3.6815 35.9749 3.02513C35.3185 2.36875 34.4283 2 33.5 2Z",
-            fill:"black",
-            fillOpacity:"0.16"
-          },
-           {
-            d:"M23.875 30.4375H37M30.4375 37V23.875M5.5 2H11.625C12.0846 2 12.5398 2.09053 12.9644 2.26642C13.389 2.44231 13.7749 2.70012 14.0999 3.02513C14.4249 3.35013 14.6827 3.73597 14.8586 4.16061C15.0345 4.58525 15.125 5.04037 15.125 5.5V11.625C15.125 12.0846 15.0345 12.5398 14.8586 12.9644C14.6827 13.389 14.4249 13.7749 14.0999 14.0999C13.7749 14.4249 13.389 14.6827 12.9644 14.8586C12.5398 15.0345 12.0846 15.125 11.625 15.125H5.5C4.57174 15.125 3.6815 14.7563 3.02513 14.0999C2.36875 13.4435 2 12.5533 2 11.625V5.5C2 4.57174 2.36875 3.6815 3.02513 3.02513C3.6815 2.36875 4.57174 2 5.5 2ZM5.5 23.875H11.625C12.5533 23.875 13.4435 24.2437 14.0999 24.9001C14.7563 25.5565 15.125 26.4467 15.125 27.375V33.5C15.125 34.4283 14.7563 35.3185 14.0999 35.9749C13.4435 36.6312 12.5533 37 11.625 37H5.5C4.57174 37 3.6815 36.6312 3.02513 35.9749C2.36875 35.3185 2 34.4283 2 33.5V27.375C2 26.4467 2.36875 25.5565 3.02513 24.9001C3.6815 24.2437 4.57174 23.875 5.5 23.875ZM27.375 2H33.5C34.4283 2 35.3185 2.36875 35.9749 3.02513C36.6312 3.6815 37 4.57174 37 5.5V11.625C37 12.5533 36.6312 13.4435 35.9749 14.0999C35.3185 14.7563 34.4283 15.125 33.5 15.125H27.375C26.4467 15.125 25.5565 14.7563 24.9001 14.0999C24.2437 13.4435 23.875 12.5533 23.875 11.625V5.5C23.875 4.57174 24.2437 3.6815 24.9001 3.02513C25.5565 2.36875 26.4467 2 27.375 2Z",
-             stroke:"black",
-              strokeWidth:"2.5",
-              strokeMiterlimit:"10",
-              strokeLinecap:"round" ,
-              strokeLinejoin:"round"
-          },
-        ],
-      
-        description:
-          "We provide in-depth customized sessions to walk you through everything in the visa application.From filling out forms to obtaining the necessary documents and preparing for the visa interview, we do not leave anything unattended with our bespoke approach of taking every step with you in confidence. ",
-      },
-      {
-        title: "Case Help in Refusal",
-        redirect:"/services#section6",
-        viewBox:"0 0 37 38",
-         paths:[
-          {
-            d:"M18.3535 0V2.66379C27.1839 2.66379 34.3362 9.81605 34.3362 18.6465C34.3362 27.477 27.1839 34.6292 18.3535 34.6292V37.293C28.649 37.293 37 28.942 37 18.6465C37 8.35097 28.649 0 18.3535 0ZM8.018 30.82L6.29986 32.8578C7.93808 34.243 9.81605 35.3484 11.8672 36.1076L12.7729 33.6037C11.0148 32.951 9.40317 32.0054 8.00468 30.82H8.018ZM2.62383 21.3103L0 21.8564C0.37293 24.0274 1.11879 26.0652 2.1843 27.9032L4.48848 26.6379C3.58279 25.0662 2.94348 23.1616 2.62383 21.3103ZM4.48848 10.6551L2.1843 9.32325C1.13211 11.1613 0.386249 13.2657 0 15.4366L2.62383 15.9028C2.94348 14.0515 3.58279 12.2401 4.48848 10.6685V10.6551ZM12.7862 3.67603L11.8805 1.17207C9.82937 1.93125 7.9514 3.03672 6.31317 4.42189L8.03132 6.45968C9.4298 5.2743 11.0414 4.32865 12.7995 3.67603H12.7862Z",
-            stroke:"black",
-          
-          },
-           {
-            d:"M25.013 13.3189V10.6551H19.6854V6.65942H17.0216V10.6551H14.3578C12.8888 10.6551 11.6941 11.8498 11.6941 13.3189V17.3146C11.6941 18.7836 12.8888 19.9784 14.3578 19.9784H22.3492V23.974H11.6941V26.6378H17.0216V30.6335H19.6854V26.6378H22.3492C23.8183 26.6378 25.013 25.4431 25.013 23.974V19.9784C25.013 18.5093 23.8183 17.3146 22.3492 17.3146H14.3578V13.3189H25.013Z",
-              stroke:"black",
-          },
-        ],
-        description:
-          "Visa refusals can be tough, but they don’t spell the end of your journey. Our experts analyze the reasons for your visa rejection and provide tailored advice on how to improve your application for a successful reapplication. With our help, you’ll know exactly how to address refusal issues and boost your chances of approval in your next attempt.  ",
-      },
-    ],
-  };
+  const homePageCards = [
+    {
+      img: "/images/homeTitleCard/portfolio.jpg",
+      hoverImg: "/images/homeTitleCard/botan2.jpg",
+      title: "Design",
+      desc: "Projects made in unreal engine and/or elsewhere, graphics design, and art collections.",
+      to: "Programming",
+    },
+    {
+      img: "/images/homeTitleCard/rvl-4k-dvdr-1.jpg",
+      hoverImg: "/images/homeTitleCard/rvl-4k-dvdr-2.jpg",
+      title: "Videos & Cinematography",
+      desc: "Videos, edits and Graphic peices.",
+      to: "Programming",
+    },
+    {
+      img: "/images/homeTitleCard/Screenshot-Code-1.png",
+      hoverImg: "/images/homeTitleCard/Screenshot-Code-2.png",
+      title: "Programming",
+      desc: "Projects in Web Development, IT and Cybersecurity.",
+      to: "Programming",
+    },
+  ]
 
   return (
-    <div className="bg-gray-100">
-      <HeroPage />
-      <Section1 data={data6} />
-      <OurServices data={data7} />
-      <Section2 data={data1} />
-      {/* <Feedbacks data={data2} /> */}
-      <Section3 />
+    <div className="magic-center mb-[100px] grow">
+      <Hero
+        h1="UI/UX Designer, Artist, Cinematographer, Broke."
+        h3="Yes, I make websites too."
+      />
+
+      <div className="flex justify-center w-[80%] gap-3 my-auto">      
+        {homePageCards.map((card, index) => (
+          <HomeTitleCard key={index} card={card} />
+        ))}      
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ function Error() {
                 <Astronaut />
             </div>
 
-            <div className='ft-regular opacity-60 text-gray-800 flex flex-col items-center justify-center gap-2'>
+            <div className='ft-regular opacity-60 text-gray-800 magic-center justify-center gap-2'>
                 <h1 className='text-[100px] leading-none '>{status}</h1>
                 <p className='text-center text-lg ft-semibold w-80'>{message}</p>
                 <Link to={'/'}>

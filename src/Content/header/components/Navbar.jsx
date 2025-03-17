@@ -4,57 +4,46 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar({isOpen, toggleMenu}) {
 
+  const navlinks = [
+    {
+      name: "Home",
+      to: "/"
+    },
+    {
+      name: "Projects",
+      to: "/Projects"
+    },
+    {
+      name: "About",
+      to: "/About"
+    },
+    {
+      name: "Contact",
+      to: "/Contact"
+    },
+  ]
+
   const linkStyles = ({ isActive }) =>
-    `font-semibold   transition-all duration-300 ${
-      isActive ? " text-[#202A44] border-b-2 border-[#202A44]" : "hover:text-gray-600 hover:-translate-y-1"
+    `nav-link-after ${
+      isActive ? "after:w-full" : "hover:after:w-full"
     }`;
+
+  const mobileLinkStyles = () =>
+    "block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300";
 
   return (
     <nav className="w-full">
       {/* Desktop Navbar */}
       <div className="hidden md:flex gap-6 items-center">
-        <NavLink
-          className={linkStyles}
-          to={"/"}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          className={linkStyles}
-          to={"/AboutUs"}
-        >
-          About
-        </NavLink>
-        <NavLink
-          className={linkStyles}
-          to={"/Services"}
-        >
-          Services
-        </NavLink>        
-        <NavLink
-         className={linkStyles}
-          to={"/Visa"}
-        >
-          Visa
-        </NavLink>
-        <NavLink
-         className={linkStyles}
-          to={"/Interview"}
-        >
-          Interview
-        </NavLink>
-        <NavLink
-         className={linkStyles}
-          to={"/FAQ"}
-        >
-          FAQs
-        </NavLink>
-        <NavLink
-          className={linkStyles}
-          to={"/Contact"}
-        >
-          Contact
-        </NavLink>
+        {navlinks.map((link, index) => (
+          <NavLink
+            key={index}
+            className={linkStyles}
+            to={link.to}
+          >
+            {link.name}
+          </NavLink>          
+        ))}
       </div>
 
       {/* Mobile Dropdown Menu */}
@@ -64,63 +53,17 @@ export default function Navbar({isOpen, toggleMenu}) {
           isOpen ? "w-[100vw] " : "w-0"
         }`}
       >
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/"}
-          onClick={toggleMenu}
-        >
-          Home
-        </Link>
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/AboutUs"}
-          onClick={toggleMenu}
-        >
-          About
-        </Link>
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/Services"}
-          onClick={toggleMenu}
-        >
-          Services
-        </Link>       
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/Visa"}
-          onClick={toggleMenu}
-        >
-          Visa
-        </Link>
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/Interview"}
-          onClick={toggleMenu}
-        >
-          Interview
-        </Link>
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/FAQ"}
-          onClick={toggleMenu}
-        >
-          FAQs
-        </Link>
-        <Link
-          className="block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300"
-          to={"/Contact"}
-          onClick={toggleMenu}
-        >
-          Contact
-        </Link>
-        <div className="m-10">
-          <Link to={"/Quote"} className="p-5 bg-[#202A44] text-white rounded-lg hover:bg-slate-300 hover:text-black duration-300" onClick={toggleMenu}>
-            Book Slot
+        {navlinks.map((link, index) => (
+          <Link
+            key={index}
+            className={mobileLinkStyles}
+            to={link.to}
+            onClick={toggleMenu}
+          >
+            {link.name}
           </Link>
-        </div>
+        ))}
       </div>
-      {/* {isOpen && (
-      )} */}
     </nav>
   );
 }

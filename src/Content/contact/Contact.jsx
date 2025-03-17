@@ -1,62 +1,76 @@
 import React from 'react'
-import Form from './pages/Form'
-import Hero from './pages/Hero'
-import RightSection from './pages/RightSection'
+import ContactItem from './components/ContactItem'
+import Hero from '../../Components/Hero'
 
 const Contact = () => {
-  const content = {
-    mainTitle: "Feel free to Contact",
-    description:
-      "Have questions or need assistance with your visa process? We're here to help! Reach out to us for:",
-    pointers: [
-      "Visa slot booking support",
-      "Mock interview training",
-      "Filing and documentation guidance",
-    ],
-    contactDetails: [
-      {
-        img: "/contact/phone.webp",
-        name: "Phone",
-        detail: "+91-82228-91986",
-      },
-      {
-        img: "/contact/gmail.webp",
-        name: "Gmail",
-        detail: "contact@visasprint.itdoubt.com",
-      },
-    ],
-    socialMedia: [
-      {
-        img: "/contact/insta.webp",
-        url: "https://www.instagram.com/visa_sprint/profilecard/?igsh=MWxheGJxdDR3MzJocQ==",
-      },
-      {
-        img: "/contact/linkedin.webp",
-        url: "https://www.linkedin.com/company/visa-sprint/posts/?feedView=all",
-      },
-      {
-        img: "/contact/facebook.webp",
-        url: "https://www.facebook.com/share/1HQ8i6W7Nu/?mibextid=wwXIfr",
-      },
-      {
-        img: "/footer/icons8-whatsapp-48.webp",
-        url: "https://chat.whatsapp.com/BydtI53ImsIK2FVWhDv9yI",
-      },
-      {
-        img: "./contact/telegram.webp",
-        url: "https://t.me/visa_slots_itdoubt",
-      },
-    ],
-  };
+  const contacts = [
+    {
+      name:"email",
+      icon:"/images/logos/logo-gmail.png",
+      hoverIcon:"/images/logos/logo-gmail-new.png",
+      detail:"soumil.biswas19@gmail.com",
+      color:"bg-[#ea4334b3]",
+    },
+    {
+      name:"facebook",
+      icon:"/images/logos/logo-facebook.png",
+      hoverIcon:"/images/logos/logo-facebook-inverted.png",
+      detail:"Soumil Biswas",
+      color:"bg-[#4b64b4b3]",
+    },
+    {
+      name:"linkedIn",
+      icon:"/images/logos/logo-linkedin.png",
+      hoverIcon:"/images/logos/logo-linkedin-inverted.png",
+      detail:"soumil-biswas-254206246",
+      color:"bg-[#389cffb3]",
+    },
+    {
+      name:"gitHub",
+      icon:"/images/logos/logo-github.png",
+      hoverIcon:"/images/logos/logo-github-inverted.png",
+      detail:"Soumil-Biswas",
+      color:"bg-gradient-to-b from-[#a735f3b3] to-[#8168fdb3]",
+    },
+    {
+      name:"gitHub2",
+      icon:"/images/logos/logo-github-inverted.png",
+      hoverIcon:"/images/logos/logo-github.png",
+      detail:"Soumil-Biswas-Web",
+      // color:"bg-gradient-to-b from-[#00786fb3] to-[#005f5ab3]",
+      color:"bg-gradient-to-t from-[#a735f3b3] to-[#8168fdb3]",
+    },
+    {
+      name:"youTube",
+      icon:"/images/logos/logo-youtube.png",
+      hoverIcon:"/images/logos/logo-youtube-inverted.png",
+      detail:"@soumilbiswas1841",
+      color:"bg-[#ff0000b3]",
+    },
+    {
+      name:"DVDR",
+      icon:"/images/logos/logo-inverted.png",
+      hoverIcon:"/images/logos/logo.png",
+      detail:"@DVDR-Main",
+      color:"bg-DVDR bg-right bottom-0 top-auto bg-[0_300px] h-[600px] bg-cover",
+    },
+    {
+      name:"email2",
+      icon:"/images/logos/logo-microsoft.png",
+      hoverIcon:"/images/logos/logo-microsoft-inverted.png",
+      detail:"soumil.biswas19@hotmail.com",
+      color:"bg-[#4dc7ffb3]",
+    },
+  ]
   return (
-    <div className=' bg-gray-100 w-full'>
-      <Hero />
-
-      <div className='relative  lg:mx-20  md:gap-2  mx-3 flex md:flex-row flex-col items-center gap-8 md:mt-16 mt-8 pb-10'>
-        <Form />
-        <RightSection data={content} />
-      </div>
-
+    <div className='magic-center gap-5 my-5'>
+      <Hero
+        h1="Contacts"
+        h3="Where to find me."
+      />
+      {contacts.map((contact, index) => (
+        <ContactItem key={index} contact={contact} />
+      ))}
     </div>
   )
 }
