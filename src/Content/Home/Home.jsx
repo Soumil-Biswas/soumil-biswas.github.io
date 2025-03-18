@@ -10,7 +10,7 @@ const Home = () => {
       hoverImg: "/images/homeTitleCard/botan2.jpg",
       title: "Design",
       desc: "Projects made in unreal engine and/or elsewhere, graphics design, and art collections.",
-      to: "Programming",
+      to: "Design",
     },
     {
       img: "/images/homeTitleCard/rvl-4k-dvdr-1.jpg",

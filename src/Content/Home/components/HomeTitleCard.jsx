@@ -7,7 +7,7 @@ export default function HomeTitleCard({card}) {
 
   return (
     <Link
-      className="magic-center bg-[--highlight-color] hover:bg-[--highlight-hover-color] duration-300 h-[450px] p-3 rounded-2xl shadow-lg shadow-[--contrast-color]"
+      className="magic-center bg-[--highlight-color] hover:bg-[--highlight-hover-color] duration-300 h-[450px] p-3 rounded-2xl shadow-lg shadow-[--shadow-color]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       to={card.to}

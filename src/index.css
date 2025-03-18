@@ -17,8 +17,10 @@
   --highlight-color: whitesmoke;
   --highlight-hover-color: rgb(236, 236, 236);
   --highlight-gradient: linear-gradient(to bottom right, #00F227, #001AFF);
-  --contrast-color:#0000001a;
-  --contrast-color-offset:#0404041a;
+  --contrast-color:#4e351d;
+  --contrast-color-offset:#696767;
+  --shadow-color:#0000001a;
+  --shadow-color-offset:#0404047a;
 }
 
 [data-theme="light"] {

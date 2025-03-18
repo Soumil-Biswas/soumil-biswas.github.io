@@ -10,8 +10,8 @@ export default function Navbar({isOpen, toggleMenu}) {
       to: "/"
     },
     {
-      name: "Projects",
-      to: "/Projects"
+      name: "Design",
+      to: "/Design"
     },
     {
       name: "About",

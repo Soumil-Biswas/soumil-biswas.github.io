@@ -7,8 +7,9 @@ import {
 import App from "./App";
 import Error from "./Content/Error/Error";
 
-import AboutUs from './Content/About/AboutUs';
 import Home from './Content/Home/Home';
+import Projects from "./Content/Projects/Projects";
+import AboutUs from './Content/About/AboutUs';
 import Contact from './Content/contact/Contact';
 import Programming from "./Content/Programming/Programming";
 
@@ -22,7 +23,7 @@ export const router = createBrowserRouter(
         <Route path="/" element={<App />} errorElement={<Error />}>
             <Route index element={<Home />} />
             <Route path="Programming" element={<Programming/>}/>
-            <Route path="Projects" element={<Contact/>}/>
+            <Route path="Design" element={<Projects/>}/>
             <Route path="About" element={<AboutUs/>}/>
             <Route path="Contact" element={<Contact/>}/>
 
