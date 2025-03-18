@@ -1,5 +1,6 @@
 import ItemEntry from "./components/ItemEntry";
 import Hero from "../../Components/Hero";
+import AestheticLuknAss from "./components/AestheticLuknAss";
 
 const AboutUs = () => {
 
@@ -43,25 +44,54 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className="w-[90%] magic-center gap-10 my-20">
-      <Hero
-        h1="About Soumil Biswas."
-        h3="Who, what and where. Maybe even why."
-      />
-
-      {items.map((item, index) => (
-        <ItemEntry
-          key={index}
-          item={item}
-          index={index}
+    <div className="magic-center gap-10 mb-20">
+      <div className="w-[60%] magic-center gap-10">
+        <Hero
+          h1="About Soumil Biswas."
+          h3="Who, what and where. Maybe even why."
         />
+        {/* Work Experience */}
+        {items.map((item, index) => (
+          <ItemEntry
+            key={index}
+            item={item}
+            index={index}
+          />      
+        ))}
+      </div>
 
-        // Work Experience
+      {/* Mention knack for design and cinematography */}
+      <div className="grid [grid-template-areas:'stack'] w-[90vw]">
+        <div className="[grid-area:stack] flex gap-10 items-end mt-[20%]">
+          <img className="object-contain w-[60%]" src="/images/Zeon.jpg" alt="img-1" />
+          <div className="magic-center justify-center w-full h-full pt-32">
+            <p className="font-inter italic text-center text-balance">Development is a means to turn design into reality. This is where is all begins for real.</p>
+          </div>
+        </div>
+        <div className="w-[90%] flex items-start gap-5 [grid-area:stack]">
+          <div className="grid [grid-template-areas:'stack'] shrink-0">
+            <div className="bg-rose-600 w-0.5 h-[500px] [grid-area:stack] mr-20 self-start justify-self-end"></div>
+            <div className="[grid-area:stack] mt-20">
+              <p className="text-7xl font-inter font-extralight pr-20">A knack for design</p>
+              <div className="bg-slate-600 h-1 w-full my-2"></div>
+              <p className="text-7xl font-inter font-extralight">	&nbsp;	&nbsp;	&nbsp;..and cinematography</p>
+            </div>
+          </div>
+          <img className="w-[70%] object-contain" src="/images/homeTitleCard/rvl-4k-dvdr.jpg" alt="img-1" />
+        </div>
+      </div>
 
-        // Mention knack for design and cinematography
-
-        // Plug in youtube stuff
-      ))}
+      {/* Plug in youtube stuff */}
+      <div className="grid [grid-template-areas:'stack'] w-[80vw]">
+        <div className="[grid-area:stack] justify-self-center self-start">
+          <AestheticLuknAss line1="My Foray into YouTube"/>
+        </div>
+        <a 
+          className="[grid-area:stack] w-[570px] h-[300px] place-self-center mt-48 rounded-3xl duration-300 hover:[box-shadow:inset_0_0_15px_5px_var(--highlight-color)] bg-cover outline outline-2 outline-[--shadow-color-offset]" 
+          style={{backgroundImage:`url("/screenshots/21-9copy.jpg")`}} 
+          href="https://soumil-biswas-web.github.io/DVDR/"
+        > </a>
+      </div>
     </div>
   );
 };

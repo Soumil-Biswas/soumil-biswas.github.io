@@ -63,7 +63,7 @@ const Contact = () => {
     },
   ]
   return (
-    <div className='magic-center gap-5 my-5'>
+    <div className='magic-center gap-5 mb-10'>
       <Hero
         h1="Contacts"
         h3="Where to find me."

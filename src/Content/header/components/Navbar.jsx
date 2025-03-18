@@ -12,6 +12,10 @@ export default function Navbar({isOpen, toggleMenu}) {
     {
       name: "Design",
       to: "/Design"
+    },    
+    {
+      name: "Development",
+      to: "/Development"
     },
     {
       name: "About",

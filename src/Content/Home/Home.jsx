@@ -17,22 +17,22 @@ const Home = () => {
       hoverImg: "/images/homeTitleCard/rvl-4k-dvdr-2.jpg",
       title: "Videos & Cinematography",
       desc: "Videos, edits and Graphic peices.",
-      to: "Programming",
+      to: "https://soumil-biswas-web.github.io/DVDR/",
     },
     {
       img: "/images/homeTitleCard/Screenshot-Code-1.png",
       hoverImg: "/images/homeTitleCard/Screenshot-Code-2.png",
       title: "Programming",
       desc: "Projects in Web Development, IT and Cybersecurity.",
-      to: "Programming",
+      to: "Development",
     },
   ]
 
   return (
     <div className="magic-center mb-[100px] grow">
       <Hero
-        h1="UI/UX Designer, Artist, Cinematographer, Broke."
-        h3="Yes, I make websites too."
+        h1="Web Developer | UI/UX Designer | Cinematographer | Broke."
+        h3="Yes, this is my first project."
       />
 
       <div className="flex justify-center w-[80%] gap-3 my-auto">      
