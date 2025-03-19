@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useRef} from "react";
 import ContactItem from './components/ContactItem'
 import Hero from '../../Components/Hero'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const Contact = () => {
   const contacts = [
@@ -68,15 +70,37 @@ const Contact = () => {
       color:"bg-[#4dc7ffb3]",
     },
   ]
+
+  const section = useRef(null);
+
+  useGSAP(() => {
+      const timeline = gsap.timeline()
+  
+      // Step 1: Ensure all elements are hidden at the start
+      timeline.set(section.current.children, { opacity: 0, y: 100 });
+
+      // Step 2: Animate elements appearing with a stagger
+      timeline.to(section.current.children, {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out",
+        stagger: 0.15
+      });
+  }, { scope: section }); 
+
   return (
     <div className='magic-center gap-5 mb-10 w-[90vw]'>
       <Hero
         h1="Contacts"
         h3="Where to find me."
       />
-      {contacts.map((contact, index) => (
-        <ContactItem key={index} contact={contact} />
-      ))}
+
+      <div ref={section} className="magic-center gap-5 w-[90vw]">
+        {contacts.map((contact, index) => (
+          <ContactItem key={index} contact={contact} />
+        ))}
+      </div>
     </div>
   )
 }

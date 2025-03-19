@@ -1,6 +1,8 @@
 import React, {useRef} from "react";
 import HomeTitleCard from "./components/homeTitleCard";
 import Hero from "../../Components/Hero";
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const Home = () => {
 
@@ -27,6 +29,23 @@ const Home = () => {
       to: "Development",
     },
   ]
+  
+  const section = useRef(null);
+
+  useGSAP(() => {
+      const timeline = gsap.timeline()
+  
+      // Step 1: Ensure all elements are hidden at the start
+      timeline.set(section.current.children, { opacity: 0, y: 100 });
+
+      // Step 2: Animate elements appearing with a stagger
+      timeline.to(section.current.children, {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out",
+      });
+  }, { scope: section }); 
 
   return (
     <div className="magic-center mb-[100px] grow">
@@ -35,7 +54,7 @@ const Home = () => {
         h3="Yes, this is my first project."
       />
 
-      <div className="flex flex-col md:flex-row justify-center w-[80%] gap-8 md:gap:5 my-auto">      
+      <div ref={section} className="flex flex-col md:flex-row justify-center w-[80%] gap-8 md:gap:5 my-auto">      
         {homePageCards.map((card, index) => (
           <HomeTitleCard key={index} card={card} />
         ))}      

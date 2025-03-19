@@ -1,6 +1,9 @@
+import React, {useRef} from "react";
 import ItemEntry from "./components/ItemEntry";
 import Hero from "../../Components/Hero";
 import AestheticLuknAss from "./components/AestheticLuknAss";
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const AboutUs = () => {
 
@@ -43,13 +46,31 @@ const AboutUs = () => {
     },
   ]
 
+  const section = useRef(null);
+
+  useGSAP(() => {
+      const timeline = gsap.timeline()
+  
+      // Step 1: Ensure all elements are hidden at the start
+      timeline.set(section.current.children, { opacity: 0, y: 100 });
+
+      // Step 2: Animate elements appearing with a stagger
+      timeline.to(section.current.children, {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out",
+        stagger: 0.15
+      });
+  }, { scope: section }); 
+
   return (
     <div className="magic-center gap-10 mb-20">
-      <div className="md:w-[60%] magic-center gap-10">
-        <Hero
-          h1="About Soumil Biswas."
-          h3="Who, what and where. Maybe even why."
-        />
+      <Hero
+        h1="About Soumil Biswas."
+        h3="Who, what and where. Maybe even why."
+      />
+      <div ref={section} className="md:w-[60%] magic-center gap-10">
         {/* Work Experience */}
         {items.map((item, index) => (
           <ItemEntry

@@ -1,26 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { useRef } from 'react';
 
 export default function HomeTitleCard({card}) {
 
   const [isHovered, setIsHovered] = useState(false);  
-  
-  const section = useRef(null);
-
-  useGSAP(() => {
-      const timeline = gsap.timeline()
-  
-      timeline.from(section.current, {
-        duration: 0.5,
-        x: 50,
-        opacity: 0,
-        ease: "power2.out",
-        stagger: 0.15
-      })
-  }, {scope:section})  
 
   return (
     <Link
