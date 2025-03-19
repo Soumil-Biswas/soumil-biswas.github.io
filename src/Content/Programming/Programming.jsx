@@ -21,13 +21,13 @@ export default function Programming() {
   ]
 
   return (
-    <div className="magic-center mb-[100px] grow">
+    <div className="magic-center mb-[100px] w-[70%] md:w-full">
       <Hero
         h1="GitHub Profiles."
         h3="Pick the portfolio to view."
       />      
 
-      <div className="flex justify-center w-[80%] gap-3 my-auto">      
+      <div className="flex flex-col md:flex-row justify-center w-[80%] gap-8 md:gap:5 my-auto">      
         {homePageCards.map((card, index) => (
           <HomeTitleCard key={index} card={card} />
         ))}      
