@@ -38,8 +38,8 @@ const Slideshow = ({ cards }) => {
     };
 
     return (
-        <div className="flex items-center">
-            <button className="text-[100px] font-bold text-[--contrast-color] hover:text-black opacity-70 duration-200"
+        <div className="flex items-center relative md:static">
+            <button className="absolute z-10 md:static text-5xl md:text-[100px] font-bold text-[--contrast-color] hover:text-black opacity-70 duration-200 left-5"
             onClick={() => {goToCard(currentIndex-1)}}>❮</button>
             <div className="relative w-full overflow-hidden my-10">
                 {/* Motion Container */}
@@ -75,7 +75,7 @@ const Slideshow = ({ cards }) => {
                     ))}
                 </div>
             </div>
-            <button className="text-[100px] font-bold text-[--contrast-color] hover:text-black opacity-70 duration-200"
+            <button className="absolute z-10 md:static text-5xl md:text-[100px] font-bold text-[--contrast-color] hover:text-black opacity-70 duration-200 right-5"
             onClick={() => {goToCard(currentIndex+1)}}>❯</button>            
         </div>
     );

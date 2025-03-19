@@ -6,7 +6,11 @@ export default function Projects() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const tabs = ["UI/UX Designs", "3D Modelling", "Art/Sketches"]
+  const tabs = [
+    "UI/UX Designs", 
+    // "3D Modelling", 
+    // "Art/Sketches",
+  ]
 
   return (
     <div>

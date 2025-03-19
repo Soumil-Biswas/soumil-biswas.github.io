@@ -28,14 +28,14 @@ export default function UI_UX() {
   return (
 
     <div className='magic-center gap-10 mb-10'>
-        <div className="flex gap-10">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
             {uiProjects.map((item, index) => (
                 <button 
                     key={index}
                     onClick={() => {
                         setCurrentIndex(index)
                     }}
-                    className={`rounded-xl w-[30vw] max-w-[400px] ${
+                    className={`rounded-xl w-[50vw] sm:w-[25vw] lg:w-[30vw] max-w-[400px] aspect-video ${
                         (index == currentIndex) && "shadow-lg shadow-[--shadow-color-offset]"
                     }`}
                 >
@@ -50,7 +50,7 @@ export default function UI_UX() {
         </div>
         
         {/* Slideshow pages */}
-        <div className="w-[80%] overflow-x-hidden">
+        <div className="w-[95%] overflow-x-hidden">
             <div className={`w-[200%] flex overflow-x-hidden duration-300 ${
                 (currentIndex == 0) ? " translate-x-0" : " -translate-x-[50%]"
             }`}>
