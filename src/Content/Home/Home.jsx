@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import HomeTitleCard from "./components/homeTitleCard";
+import HomeTitleCard from "./components/HomeTitleCard";
 import Hero from "../../Components/Hero";
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'

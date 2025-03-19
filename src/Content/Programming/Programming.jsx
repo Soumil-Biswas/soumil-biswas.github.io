@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeTitleCard from '../Home/components/homeTitleCard';
+import HomeTitleCard from '../Home/components/HomeTitleCard';
 import Hero from '../../Components/Hero';
 
 export default function Programming() {
