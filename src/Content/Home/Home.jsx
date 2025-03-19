@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import HomeTitleCard from "./components/homeTitleCard";
 import Hero from "../../Components/Hero";
 
@@ -35,7 +35,7 @@ const Home = () => {
         h3="Yes, this is my first project."
       />
 
-      <div className="flex justify-center w-[80%] gap-3 my-auto">      
+      <div className="flex flex-col md:flex-row justify-center w-[80%] gap-8 md:gap:5 my-auto">      
         {homePageCards.map((card, index) => (
           <HomeTitleCard key={index} card={card} />
         ))}      

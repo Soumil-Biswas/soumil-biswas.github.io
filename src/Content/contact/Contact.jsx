@@ -17,6 +17,7 @@ const Contact = () => {
       hoverIcon:"/images/logos/logo-facebook-inverted.png",
       detail:"Soumil Biswas",
       color:"bg-[#4b64b4b3]",
+      url: "https://www.facebook.com/soumil.biswas.1",
     },
     {
       name:"linkedIn",
@@ -24,6 +25,7 @@ const Contact = () => {
       hoverIcon:"/images/logos/logo-linkedin-inverted.png",
       detail:"soumil-biswas-254206246",
       color:"bg-[#389cffb3]",
+      url: "https://www.linkedin.com/in/soumil-biswas-254206246/",
     },
     {
       name:"gitHub",
@@ -31,6 +33,7 @@ const Contact = () => {
       hoverIcon:"/images/logos/logo-github-inverted.png",
       detail:"Soumil-Biswas",
       color:"bg-gradient-to-b from-[#a735f3b3] to-[#8168fdb3]",
+      url: "https://github.com/Soumil-Biswas",
     },
     {
       name:"gitHub2",
@@ -39,6 +42,7 @@ const Contact = () => {
       detail:"Soumil-Biswas-Web",
       // color:"bg-gradient-to-b from-[#00786fb3] to-[#005f5ab3]",
       color:"bg-gradient-to-t from-[#a735f3b3] to-[#8168fdb3]",
+      url: "https://github.com/Soumil-Biswas-Web",
     },
     {
       name:"youTube",
@@ -46,6 +50,7 @@ const Contact = () => {
       hoverIcon:"/images/logos/logo-youtube-inverted.png",
       detail:"@soumilbiswas1841",
       color:"bg-[#ff0000b3]",
+      url: "https://www.youtube.com/@soumilbiswas1841",
     },
     {
       name:"DVDR",
@@ -53,6 +58,7 @@ const Contact = () => {
       hoverIcon:"/images/logos/logo.png",
       detail:"@DVDR-Main",
       color:"bg-DVDR bg-right bottom-0 top-auto bg-[0_300px] h-[600px] bg-cover",
+      url: "https://soumil-biswas-web.github.io/DVDR/",
     },
     {
       name:"email2",

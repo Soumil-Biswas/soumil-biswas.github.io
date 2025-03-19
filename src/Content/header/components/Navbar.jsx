@@ -1,31 +1,9 @@
 import React from "react";
+import navlinks from "./navlinks";
 
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar({isOpen, toggleMenu}) {
-
-  const navlinks = [
-    {
-      name: "Home",
-      to: "/"
-    },
-    {
-      name: "Design",
-      to: "/Design"
-    },    
-    {
-      name: "Development",
-      to: "/Development"
-    },
-    {
-      name: "About",
-      to: "/About"
-    },
-    {
-      name: "Contact",
-      to: "/Contact"
-    },
-  ]
 
   const linkStyles = ({ isActive }) =>
     `nav-link-after ${

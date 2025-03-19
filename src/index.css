@@ -6,44 +6,45 @@
 
 /* Global Font */
 * {
-  @apply font-bebas
+  @apply font-bebas;
+  color: var(--text-color);
 }
 
 /* Theme Colors for light and dark mode */
 :root {
+  --background-color:rgb(7, 7, 7);
+  --background-color-offset:rgb(27, 27, 27);
+  --highlight-color: rgb(50, 50, 50);
+  --highlight-hover-color: rgb(27, 27, 27);
+  --contrast-color:#00F227;;
+  --contrast-color-offset:#01AC1C;
+  --shadow-color:#00f2286b;
+  --shadow-color-offset:#01AC1C7a;
+  --text-color: white;
+}
+
+[data-theme="light"] {
   --background-color:white;
   --background-color-offset:rgb(236, 236, 236);
-  --background-gradient: linear-gradient(to top, #222436, #2B315E);
   --highlight-color: whitesmoke;
   --highlight-hover-color: rgb(236, 236, 236);
-  --highlight-gradient: linear-gradient(to bottom right, #00F227, #001AFF);
   --contrast-color:#4e351d;
   --contrast-color-offset:#696767;
   --shadow-color:#0000001a;
   --shadow-color-offset:#0404047a;
-}
-
-[data-theme="light"] {
-  --background-color:#F8F8F8;
-  --background-color-offset:#D9D9D9;
-  --background-gradient: linear-gradient(to top, #F8F8F8, #D9D9D9);
-  --highlight-color: #F2CA00;
-  --highlight-hover-color: #cead06;
-  --highlight-gradient: linear-gradient(to bottom right, #F2CA00, #FF2B00);
-  --contrast-color:#00F2271a;
-  --contrast-color-offset:#01AC1C1a;
+  --text-color: Black;
 }
 
 @layer components {
   .nav-link-after {
-    @apply text-2xl transition-all duration-300 text-black after:block after:content-[""] after:bg-[hsla(29,45%,21%,0.7)] after:w-0 after:h-[1.5px] after:duration-300 after:m-auto hover:after:w-full
+    @apply text-2xl transition-all duration-300 after:block after:content-[""] after:bg-[--contrast-color] after:w-0 after:h-[1.5px] after:duration-300 after:m-auto hover:after:w-full
   }
 
-  h1 {@apply text-4xl}
+  h1 {@apply text-4xl text-center}
 
-  h2 {@apply text-2xl}
+  h2 {@apply text-2xl text-center}
 
-  h3{ @apply text-xl}
+  h3{ @apply text-xl text-center}
 
   .magic-center{ @apply flex flex-col items-center}
 }

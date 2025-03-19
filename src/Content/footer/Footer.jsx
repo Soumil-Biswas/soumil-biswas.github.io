@@ -1,12 +1,8 @@
 import React from "react";
-import { IoIosNotifications } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
-import { useForm, Controller } from "react-hook-form";
-import * as Yup from "yup";
-import { yupResolver } from '@hookform/resolvers/yup';
-import axios from "axios";
+import navlinks from "../header/components/navlinks";
 import FooterLink from "./components/FooterLink";
+import { Link } from "react-router-dom";
+import clipBoard from "../contact/components/clipBoard";
 
 const Footer = () => {
 
@@ -61,35 +57,44 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[--background-color-offset] print:hidden w-full border-t-2 border-transparent //dark:border-[--contrast-color]">
-      <div className="magic-center justify-center p-12 gap-5">
+    <footer className="bg-[--background-color-offset] print:hidden w-full border-t-2 border-transparent dark:border-[--contrast-color]">
+      <div className="magic-center justify-center px-16 py-5 gap-10">
         <div className="grid grid-cols-2 place-items-center w-full">
-          <div className="flex flex-col">
+        <div className="flex flex-col">
+          {navlinks.map((link, index) => (
+            <Link key={index} to={link.to} className="hover:-translate-x-1 duration-300" >{link.name}</Link> 
+          ))}
+        </div>
+
+          <div className="flex flex-col gap-3">
             {contacts.map((contact, index) => {
               if (contact.name.includes("email")) {
                 return (
-                  <div key={index} className="flex gap-5">
+                  <button 
+                    onClick={() => clipBoard(contact.detail)}
+                    key={index} 
+                    className="flex gap-2 items-center leading-none"
+                  >
                     <img className="w-5 object-contain" src={contact.icon} alt={contact.name} />
                     <p>{contact.detail}</p>
-                  </div>
+                  </button>
                 )
               }
             })}
-          </div>
-
-          <div className="flex items-center gap-10">
-            {contacts.map((contact, index) => {
-                if (!contact.name.includes("email")) {
-                  return (
-                    <FooterLink key={index} contact={contact} />
-                  )
-              }
-            })}
+            <div className="flex items-center gap-10">
+              {contacts.map((contact, index) => {
+                  if (!contact.name.includes("email")) {
+                    return (
+                      <FooterLink key={index} contact={contact} />
+                    )
+                }
+              })}
+            </div>
           </div>
         </div>
 
         {/* copyright part */}
-        <p className="text-center">© All Copyright 2025 by Soumil Biswas</p>
+        <p className="text-center">© All Copyright {new Date().getFullYear()} by Soumil Biswas</p>
       </div>
     </footer>
   );

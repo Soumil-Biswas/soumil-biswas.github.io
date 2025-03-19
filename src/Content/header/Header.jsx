@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import LightMode from "./components/LightMode";
 
 export default function Header() {
 
@@ -21,7 +22,8 @@ export default function Header() {
           <p className="text-sm nav-link-after">Soumil</p>          
         </Link>
 
-        <div className="flex gap-2">
+        <div className="flex gap-5">
+          <LightMode/>
           <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
           {/* Mobile Menu Icon */}
           <button
