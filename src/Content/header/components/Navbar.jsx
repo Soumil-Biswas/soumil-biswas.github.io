@@ -1,6 +1,6 @@
 import React from "react";
 import navlinks from "./navlinks";
-
+import MobileMenuToggle from "./MobileMenuToggle";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar({isOpen, toggleMenu}) {
@@ -11,7 +11,7 @@ export default function Navbar({isOpen, toggleMenu}) {
     }`;
 
   const mobileLinkStyles = () =>
-    "block p-2 font-semibold hover:bg-gray-200 border-b-2 border-blue-950 duration-300";
+    "nav-link-after text-left";
 
   return (
     <nav className="w-full">
@@ -30,15 +30,17 @@ export default function Navbar({isOpen, toggleMenu}) {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`absolute transform bg-gray-100 shadow-lg top-20
-        text-center right-0 z-10 md:hidden duration-1000 overflow-hidden ${
-          isOpen ? "w-[100vw] " : "w-0"
+        className={`absolute transform bg-[--background-color-offset] shadow-side top-0 right-0 z-20 md:hidden duration-1000 overflow-hidden min-h-screen flex flex-col gap-5 py-10 ${
+          isOpen ? "w-[50vw] max-w-[300px] shadow-[--shadow-color] px-10" : "w-0 shadow-transparent"
         }`}
       >
+        <div className="self-end">
+          <MobileMenuToggle isOpen={isOpen} onClick={toggleMenu}/>
+        </div>
         {navlinks.map((link, index) => (
           <Link
             key={index}
-            className={mobileLinkStyles}
+            className={mobileLinkStyles()}
             to={link.to}
             onClick={toggleMenu}
           >

@@ -59,8 +59,8 @@ const Footer = () => {
   return (
     <footer className="bg-[--background-color-offset] print:hidden w-full border-t-2 border-transparent dark:border-[--contrast-color]">
       <div className="magic-center justify-center px-16 py-5 gap-10">
-        <div className="grid grid-cols-2 place-items-center w-full">
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1 xs:grid-cols-2 place-items-center w-full gap-10">
+        <div className="magic-center xs:items-start">
           {navlinks.map((link, index) => (
             <Link key={index} to={link.to} className="hover:-translate-x-1 duration-300" >{link.name}</Link> 
           ))}
@@ -81,7 +81,7 @@ const Footer = () => {
                 )
               }
             })}
-            <div className="flex items-center gap-10">
+            <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-5 lg:gap-10">
               {contacts.map((contact, index) => {
                   if (!contact.name.includes("email")) {
                     return (

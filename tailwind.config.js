@@ -20,6 +20,7 @@ export default {
       },
       boxShadow: {
         "4xl": "0 0 15px rgba(156, 163, 175, 0.5)",
+        "side": "0 0 15px 15px rgba(156, 163, 175, 0.5)",
       },
       backgroundImage: {
         'DVDR': "url('/images/home-main.jpg')"
