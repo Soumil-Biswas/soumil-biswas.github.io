@@ -1,37 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 
 function Loader() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.interceptors.request.use(
-            (config) => {
-                setLoading(true);
-                return config;
-            },
-            (error) => {
-                setLoading(false);
-                return Promise.reject(error);
-            }
-        );
-
-        axios.interceptors.response.use(
-            (response) => {
-                setLoading(false);
-                return response;
-            },
-            (error) => {
-                setLoading(false);
-                return Promise.reject(error);
-            }
-        );
+        const timer = setTimeout(() => setLoading(false), 5000);
+        return () => clearTimeout(timer)
     }, []);
 
     if (loading) {
         return (
-            <div className="fixed z-[100] bg-white/95 w-full h-screen flex justify-center items-center">
-                <div className="h-[50px] w-[50px] md:h-[80px] md:w-[80px] rounded-full border-b-2 border-b-[#5B80B0] animate-spin"></div>
+            <div className="fixed z-[100] bg-[--highlight-hover-color] w-full h-screen flex justify-center items-center">
+                <div className="h-[50px] w-[50px] md:h-[80px] md:w-[80px] rounded-full border-b-2 border-b-[--shadow-color-offset] animate-spin"></div>
             </div>
         );
     }
