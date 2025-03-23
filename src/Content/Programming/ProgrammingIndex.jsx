@@ -21,8 +21,8 @@ export default function ProgrammingIndex() {
       to: "https://github.com/Soumil-Biswas-Web",
     },
     {
-      img: "/images/homeTitleCard/Screenshot-Code-3.png",
-      hoverImg: "/images/homeTitleCard/Screenshot-Code-3.png",
+      img: "/images/homeTitleCard/960x0.jpg",
+      hoverImg: "/images/homeTitleCard/960x0.jpg",
       title: "VR Development",
       desc: "Stint in Virtual Reality Simulations.",
       to: "/Development/VR",

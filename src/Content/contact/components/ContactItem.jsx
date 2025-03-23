@@ -1,10 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import clipBoard from './clipBoard';
 
 export default function ContactItem({contact}) {
 
   const [isHovered, setIsHovered] = useState(false); 
+
+  // Preload hover image when the component mounts
+  useEffect(() => {
+    const img = new Image();
+    img.src = contact.hoverImg;
+  }, [contact.hoverImg]);  
 
   if (contact?.url) return (
     <Link className='group w-full max-w-[500px] relative overflow-y-hidden rounded-[20px]'
