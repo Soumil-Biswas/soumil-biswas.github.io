@@ -1,5 +1,5 @@
 import {
-    createBrowserRouter,
+    createHashRouter,
     createRoutesFromElements,
     Route,
 } from "react-router-dom";
@@ -20,7 +20,7 @@ import Bus from "./utils/Bus";
 window.flash = (message, type = "success") =>
     Bus.emit("flash", { message, type });
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
     createRoutesFromElements(
         <Route path="/" element={<App />} errorElement={<Error />}>
             <Route index element={<Home />} />
