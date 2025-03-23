@@ -12,6 +12,8 @@ import Projects from "./Content/Projects/Projects";
 import AboutUs from './Content/About/AboutUs';
 import Contact from './Content/contact/Contact';
 import Programming from "./Content/Programming/Programming";
+import ProgrammingIndex from "./Content/Programming/ProgrammingIndex";
+import VR from "./Content/Programming/VR";
 
 import Bus from "./utils/Bus";
 
@@ -22,7 +24,10 @@ export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App />} errorElement={<Error />}>
             <Route index element={<Home />} />
-            <Route path="Development" element={<Programming/>}/>
+            <Route path="Development" element={<Programming/>}>
+                <Route index element={<ProgrammingIndex/>} />
+                <Route path="VR" element={<VR/>} />
+            </Route>
             <Route path="Design" element={<Projects/>}/>
             <Route path="About" element={<AboutUs/>}/>
             <Route path="Contact" element={<Contact/>}/>

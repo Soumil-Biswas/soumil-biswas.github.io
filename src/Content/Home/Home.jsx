@@ -25,7 +25,7 @@ const Home = () => {
       img: "/images/homeTitleCard/Screenshot-Code-1.png",
       hoverImg: "/images/homeTitleCard/Screenshot-Code-2.png",
       title: "Programming",
-      desc: "Projects in Web Development, IT and Cybersecurity.",
+      desc: "Projects in Web Development, IT and Virtual Reality.",
       to: "Development",
     },
   ]
@@ -42,7 +42,7 @@ const Home = () => {
       timeline.to(section.current.children, {
         y: 0,
         opacity: 1,
-        duration: 2,
+        duration: 1,
         ease: "power2.out",
       });
   }, { scope: section }); 

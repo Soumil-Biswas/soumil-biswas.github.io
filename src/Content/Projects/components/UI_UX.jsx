@@ -2,34 +2,39 @@ import React, { useState } from 'react'
 import BehanceLink from './BehanceLink'
 import Slideshow from '../../../Components/Slideshow'
 
-// Dynamically import all images from the "screenshots" folder
-const images = import.meta.glob('/public/screenshots/**/*.png', { eager: true });
-
-// Convert the imported files into an array
-const imagePaths = Object.keys(images);
-
 export default function UI_UX() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const uiProjects = [
         {
-            name: "AssassinTheFirstList1",
-            thumbnail: (imagePaths.filter(path => path.includes("UltimateMainMenu")))[2],
-            cards: imagePaths.filter(path => path.includes("UltimateMainMenu")),
+            name: "UltimateMainMenu",
+            folder: "UltimateMainMenu", // Folder name
+            thumbnail: "/screenshots/UltimateMainMenu/img3.png", // Manually set a main thumbnail
         },
         {
-            name: "AssassinTheFirstList2",
-            thumbnail: imagePaths.find(path => path.includes("ProMainMenuV3")),
-            cards: imagePaths.filter(path => path.includes("ProMainMenuV3")),
-        },
-    ]
+            name: "ProMainMenuV3",
+            folder: "ProMainMenuV3",
+            thumbnail: "/screenshots/ProMainMenuV3/img1.png",
+        }
+    ];
+
+    function getImagePaths(folder, count) {
+        return Array.from({ length: count }, (_, index) => 
+            `/screenshots/${folder}/img${index + 1}.png`
+        );
+    }
+    
+    const projectsWithImages = uiProjects.map(project => ({
+        ...project,
+        cards: getImagePaths(project.folder, 8) // Change `4` to the number of images in each folder
+    }));
 
   return (
 
     <div className='magic-center gap-10 mb-10'>
         <div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
-            {uiProjects.map((item, index) => (
+            {projectsWithImages.map((item, index) => (
                 <button 
                     key={index}
                     onClick={() => {
@@ -56,12 +61,12 @@ export default function UI_UX() {
             }`}>
                 <div className="flex-1">
                     <Slideshow 
-                        cards={uiProjects[0].cards}
+                        cards={projectsWithImages[0].cards}
                     />
                 </div>
                 <div className="flex-1">
                     <Slideshow 
-                        cards={uiProjects[1].cards}
+                        cards={projectsWithImages[1].cards}
                     />
                 </div>
             </div>
