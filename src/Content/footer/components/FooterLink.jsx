@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 export default function FooterLink({contact}) {
     
   const [isHovered, setIsHovered] = useState(false);  
+
+  // Preload hover image when the component mounts
+  useEffect(() => {
+    const img = new Image();
+    img.src = contact.hoverImg;
+  }, [contact.hoverImg]);  
     
   return (
     <Link
