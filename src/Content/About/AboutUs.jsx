@@ -104,6 +104,7 @@ const AboutUs = () => {
           className="[grid-area:stack] w-full max-w-[570px] aspect-video place-self-center mt-[25%] md:mt-48 rounded-3xl duration-300 hover:[box-shadow:inset_0_0_15px_5px_var(--highlight-color)] bg-cover outline outline-2 outline-[--shadow-color-offset]" 
           style={{backgroundImage:`url("/screenshots/21-9copy.jpg")`}} 
           href="https://soumil-biswas-web.github.io/DVDR/"
+          target='_blank' 
         > </a>
       </div>
     </div>

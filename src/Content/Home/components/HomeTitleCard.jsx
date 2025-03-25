@@ -17,6 +17,7 @@ export default function HomeTitleCard({card}) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       to={card.to}
+      {...(!card.to.startsWith('/') && {target:'_blank'})} 
     >
         <div
             className="w-full md:w-[25vw] max-w-[400px] h-[200px] md:h-[25vh] max-h-[225px] rounded-xl bg-cover bg-center transition-all duration-[400ms]"

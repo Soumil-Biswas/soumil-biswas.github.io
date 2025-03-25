@@ -12,7 +12,7 @@ const Home = () => {
       hoverImg: "/images/homeTitleCard/botan2.jpg",
       title: "Design",
       desc: "Projects made in unreal engine and/or elsewhere, graphics design, and art collections.",
-      to: "Design",
+      to: "/Design",
     },
     {
       img: "/images/homeTitleCard/rvl-4k-dvdr-1.jpg",
@@ -26,7 +26,7 @@ const Home = () => {
       hoverImg: "/images/homeTitleCard/Screenshot-Code-2.png",
       title: "Programming",
       desc: "Projects in Web Development, IT and Virtual Reality.",
-      to: "Development",
+      to: "/Development",
     },
   ]
   

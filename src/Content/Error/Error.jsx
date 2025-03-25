@@ -12,9 +12,9 @@ function Error() {
                 <Astronaut />
             </div>
 
-            <div className='ft-regular opacity-60 text-gray-800 magic-center justify-center gap-2'>
-                <h1 className='text-[100px] leading-none '>{status}</h1>
-                <p className='text-center text-lg ft-semibold w-80'>{message}</p>
+            <div className='ft-regular opacity-60 magic-center justify-center gap-2'>
+                <h1 className='text-[100px] leading-none text-gray-800'>{status}</h1>
+                <p className='text-center text-lg ft-semibold w-80 text-gray-800'>{message}</p>
                 <Link to={'/'}>
                     <button className='bg-[#07223D] text-white px-6 py-2 rounded-full mt-6'>Go Home</button>
                 </Link>

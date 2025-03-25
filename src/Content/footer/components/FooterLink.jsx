@@ -17,6 +17,7 @@ export default function FooterLink({contact}) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       to={contact.url}
+      {...(!contact.url.startsWith('/') && {target:'_blank'})} 
     >
         <div 
         className="w-10 h-10 bg-cover rounded-full transition-all duration-300"
