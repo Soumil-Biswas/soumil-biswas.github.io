@@ -43,6 +43,7 @@ export default function ProgrammingIndex() {
         opacity: 1,
         duration: 1,
         ease: "power2.out",
+        stagger: 0.2,
       });
   }, { scope: section });   
 
