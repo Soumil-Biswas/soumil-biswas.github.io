@@ -36,7 +36,7 @@ const AboutUs = () => {
       ]
     },
     {
-      title: "Project TitleGame Developer [Intern], Akiyam Solutions",
+      title: "Game Developer [Intern], Akiyam Solutions",
       items: [
         "• Interned on a Stealth Action Game Project: Assassin: The First List; as UI/UX developer",
         "• Added accessibility options and multi-language translations for all UI elements in more than 7 languages",

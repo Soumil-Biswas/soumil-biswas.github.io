@@ -8,6 +8,7 @@ const PageTitle = () => {
     const titles = {
       "/": "Home | Soumil Biswas",
       "/Development": "Development | Soumil Biswas",
+      "/Development/VR": "VR Development | Soumil Biswas",
       "/Design": "Design | Soumil Biswas",
       "/About": "About | Soumil Biswas",
       "/Contact": "Contact | Soumil Biswas",
