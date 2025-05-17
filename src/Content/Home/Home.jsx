@@ -49,7 +49,7 @@ const Home = () => {
   }, { scope: section }); 
 
   return (
-    <div className="magic-center mb-[100px] grow">
+    <div className="magic-center mb-[100px] grow w-full">
       <Hero
         h1="Web Developer | UI/UX Designer | Cinematographer | Broke."
         h3="Yes, this is my first project."

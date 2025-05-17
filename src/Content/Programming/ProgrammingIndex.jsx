@@ -48,7 +48,7 @@ export default function ProgrammingIndex() {
   }, { scope: section });   
 
   return (
-    <div className="magic-center mb-[100px] grow">
+    <div className="magic-center mb-[100px] grow w-full">
       <Hero
         h1="GitHub Profiles."
         h3="Pick the portfolio to view."
