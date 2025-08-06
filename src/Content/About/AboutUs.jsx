@@ -38,7 +38,7 @@ const AboutUs = () => {
     {
       title: "Game Developer [Intern], Akiyam Solutions",
       items: [
-        "• Interned on a Stealth Action Game Project: Assassin: The First List; as UI/UX developer",
+        "• Interned on a Stealth Action Game Project: Assassin: The First List, as UI/UX developer",
         "• Added accessibility options and multi-language translations for all UI elements in more than 7 languages",
         "• Used UE’s Xsolla extension to enable In-game currency and microtransaction system. Added 75+ Items and packs in store page.",
         "• Created Steam Page for the Game and added over 40 achievements.",
