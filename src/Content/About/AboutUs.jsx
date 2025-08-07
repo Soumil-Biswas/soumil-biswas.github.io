@@ -9,13 +9,21 @@ const AboutUs = () => {
 
   const items = [
     {
-      title: "Self Employed",
+      title: "Executive-Data Analyst, Flipkart",
       items: [
-        "• Communicating with clients. Managing interests and delivering.",
-        "• Design, Develpment, Content enrichment, with a primary focus on Web Development.",
-        "• Online Hosting and maintainance support",
+        "• Designing Automation Systems, Tables and Dashboards to Visualize Data.",
+        "• Used Google Sheets and Drive APIs in Python to deliver fully automatic report generation systems from Source to Visuals.",
+        "• Created reports displaying key fulfillment metrics which increased metric adherence by 24% accross the board.",
       ]
     },
+    // {
+    //   title: "Self Employed",
+    //   items: [
+    //     "• Communicating with clients. Managing interests and delivering.",
+    //     "• Design, Develpment, Content enrichment, with a primary focus on Web Development.",
+    //     "• Online Hosting and maintainance support",
+    //   ]
+    // },
     {
       title: "Frontend Developer, IT Doubt",
       items: [

@@ -9,31 +9,37 @@ export default function VR() {
             name: "EMS Anaplylaxis",
             img: "https://medvr.education/wp-content/uploads/2024/06/EMS-Anaphylaxis.jpg",
             to: "https://medvr.education/solution/ems-anaphylaxis/",
+            desc: "A patient suffering from acute anaphylaxia due to eating an allergic food item in a restaurant. Focus on providing immediate emergancy care in a public space."
         },
         {
             name: "Knee Arthrocentesis",
             img: "https://medvr.education/wp-content/uploads/2024/07/banner.01_28_23_02.Still012-1.png",
             to: "https://medvr.education/solution/knee-arthrocentesis/",
+            desc: "An old patient suffering from knee pain and swelling due to gout or arthiritis. Focus on the flexibility in conducting Arthrocentesis procedure from either the medial or lateral positions."
         },
         {
             name: "Verbal De-escalation",
             img: "https://medvr.education/wp-content/uploads/2024/09/resized-image.png",
             to: "https://medvr.education/solution/verbal-de-escalation-calm-to-angry/",
+            desc: "A patient experiencing sudden distress during a routine checkup. A lesson in de-escalating situations involving recovering patients."
         },
         {
             name: "Pilonidal Abcess Removal",
             img: "https://medvr.education/wp-content/uploads/2024/09/banner.00_26_41_19.Still007-1.png",
             to: "https://medvr.education/solution/pilonidal-abscess-removal/",
+            desc: "A patient with a large abscess which makes it difficult to sit and work. Simulation trains proper abscess incision and drainage practices."
         },
         {
             name: "ED Thoracotomy",
             img: "https://medvr.education/wp-content/uploads/2024/10/tutorial.00_09_45_30.Still001-1.png",
             to: "https://medvr.education/solution/ed-thoracotomy/",
+            desc: "A patient with a large stab wound in his heart. Focus on performing fast, critical and life saving surgeries in a high stress environment."
         },
         {
             name: "Male Genitourinary Assessment",
             img: "https://medvr.education/wp-content/uploads/2024/10/Male-g-500.jpg",
             to: "https://medvr.education/solution/male-genitourinary-assessment/",
+            desc: "An older male patient having trouble with urination. A practice in genitourinary assessment for preliminary diagnosis."
         },
   ];
 
@@ -42,11 +48,13 @@ export default function VR() {
             name: "HVAC Tools and Equipment",
             img: "https://immerselearn.com/wp-content/uploads/2025/02/Micro-HVAC-THumb-tools-equip.jpg",
             to: "https://immerselearn.com/hvac-tools-and-equipment/",
+            desc: "Simulation for basic training of tools like hammers, saws, pliers and wire cutters."
         },
         {
             name: "Plumbing Tools and Equipment",
             img: "https://immerselearn.com/wp-content/uploads/2025/02/Plumbing-micro-tools-equip.jpg",
             to: "https://immerselearn.com/plumbing-tools-and-equipment/",
+            desc: "Simulations for using plumbing equipment (pipe cutters, saws, power tools, measures and calipers."
         },
   ];  
     
@@ -65,7 +73,7 @@ export default function VR() {
         />
         <div className="flex flex-wrap justify-center gap-5 mb-8">
             {medVRWork.map((item, index) => (
-                <ItemCard key={index} item={item}/>
+                <ItemCard key={index} item={item} index={index}/>
             ))}
         </div>
       </div>
@@ -77,7 +85,7 @@ export default function VR() {
         />
         <div className="flex flex-wrap justify-center gap-5 mb-8">
             {immerseLearnWork.map((item, index) => (
-                <ItemCard key={index} item={item}/>
+                <ItemCard key={index} item={item} index={index}/>
             ))}
         </div>
       </div>
